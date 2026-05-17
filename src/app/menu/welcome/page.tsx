@@ -28,13 +28,14 @@ export default function WelcomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-[url('/images/background/GridArt_20250522_195346089_white.jpg')] bg-fixed bg-cover bg-center flex flex-col font-sans">
-      {/* --- HEADER (Κλειδωμένο Context) --- */}
+    // h-screen και overflow-hidden για να ΜΗΝ υπάρχει ποτέ scrollbar
+    <div className="h-screen w-screen bg-[url('/images/background/GridArt_20250522_195346089_white.jpg')] bg-fixed bg-cover bg-center flex flex-col overflow-hidden font-sans">
+      {/* --- HEADER (Κλειδωμένο 1:1 με το μενού) --- */}
       <motion.header
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         style={{ backgroundColor: "rgb(151, 220, 245)" }}
-        className="p-4 shadow-sm relative flex justify-center items-center min-h-[72px] z-50"
+        className="p-4 shadow-sm relative flex justify-center items-center h-[72px] shrink-0 z-50"
       >
         <div className="relative w-36 h-12">
           <Image
@@ -48,44 +49,41 @@ export default function WelcomePage() {
         </div>
       </motion.header>
 
-      {/* --- ΚΕΝΤΡΙΚΟ CONTAINER (Μεγάλωσε σε max-w-2xl και p-10) --- */}
-      <div className="p-4 flex-grow w-full flex items-center justify-center">
+      {/* --- ΚΕΝΤΡΙΚΟ CONTAINER --- */}
+      <div className="flex-grow flex items-center justify-center p-4 min-h-0">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-white/95 backdrop-blur-sm p-10 rounded-[2.5rem] shadow-xl border border-white w-full max-w-2xl text-center"
+          className="bg-white/95 backdrop-blur-sm p-6 sm:p-8 rounded-[2rem] shadow-xl border border-white w-full max-w-2xl flex flex-col justify-center"
         >
-          <h1 className="text-3xl font-extrabold text-slate-800 mb-2 tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-800 mb-1 tracking-tight text-center">
             Welcome
           </h1>
-          {/* Διορθώθηκε το κείμενο (μόνο αγγλικά) */}
-          <p className="text-slate-500 text-base mb-10 italic font-medium">
+          <p className="text-slate-500 text-sm sm:text-base mb-6 italic font-medium text-center">
             Please select your language
           </p>
 
-          {/* Grid Γλωσσών με μεγαλύτερο gap */}
-          <div className="grid grid-cols-2 gap-6">
+          {/* 2 στήλες σε κινητά, 4 σε desktop για να εκμεταλλευτούμε το πλάτος και να μην βγαίνει scroll */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
             {availableLanguages.map((l) => (
               <motion.button
                 key={l.code}
-                whileHover={{ scale: 1.03, translateY: -5 }}
+                whileHover={{ scale: 1.03, translateY: -2 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => handleLanguageSelect(l.code)}
-                /* Μεγαλώσαμε το padding (p-8) και το rounded (rounded-3xl) */
-                className="bg-white hover:bg-slate-50/50 p-8 rounded-3xl border border-slate-200 flex flex-col items-center justify-center transition-all shadow-sm hover:shadow-lg group"
+                className="bg-white hover:bg-slate-50/50 py-3.5 px-4 rounded-2xl border border-slate-200 flex flex-col items-center justify-center transition-all shadow-sm hover:shadow-md group"
               >
-                {/* Μεγαλώσαμε αισθητά τη σημαία (w-20 h-12) */}
-                <div className="relative w-20 h-12 shadow-md border border-slate-200 rounded-lg overflow-hidden mb-4 shrink-0 transition-transform group-hover:scale-105">
+                {/* Καθαρό και μεγάλο μέγεθος σημαίας */}
+                <div className="relative w-14 h-9 sm:w-16 sm:h-10 shadow-md border border-slate-200 rounded-md overflow-hidden mb-2 shrink-0">
                   <Image
                     src={l.flag}
                     alt={l.label}
                     fill
-                    sizes="100px"
+                    sizes="80px"
                     className="object-cover"
                   />
                 </div>
-                {/* Μεγαλώσαμε το κείμενο (text-lg) */}
-                <span className="text-lg font-bold text-slate-700 group-hover:text-slate-900 transition-colors">
+                <span className="text-xs sm:text-sm font-bold text-slate-700 group-hover:text-slate-900 transition-colors truncate w-full text-center">
                   {l.label}
                 </span>
               </motion.button>
@@ -94,8 +92,8 @@ export default function WelcomePage() {
         </motion.div>
       </div>
 
-      {/* --- FOOTER (Κλειδωμένο Context) --- */}
-      <footer className="mt-auto py-6 text-center text-slate-600 text-sm font-medium bg-white/70 backdrop-blur-md border-t border-slate-200">
+      {/* --- FOOTER (Κλειδωμένο 1:1 με το μενού) --- */}
+      <footer className="mt-auto py-6 text-center text-slate-600 text-sm font-medium bg-white/70 backdrop-blur-md border-t border-slate-200 shrink-0">
         <p>
           © 2007 - {new Date().getFullYear()} Zucchero · All Rights Reserved
         </p>
