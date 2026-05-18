@@ -110,6 +110,10 @@ const uiTranslations = {
 // Ο τύπος για τις γλώσσες μας
 type LangCode = keyof typeof uiTranslations;
 
+// Βοηθητική συνάρτηση που εξαφανίζει τους τόνους από οποιαδήποτε γλώσσα
+const stripAccents = (str: string) =>
+  str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
 export default function MenuPage() {
   const [activeCategory, setActiveCategory] = useState(categories[0].id);
   const [lang, setLang] = useState<LangCode>("el");
@@ -134,13 +138,19 @@ export default function MenuPage() {
   const activeItems =
     searchQuery.trim() !== ""
       ? menuItems.filter((item) => {
-          const query = searchQuery.toLowerCase();
-          const nameMatch = item.translations[lang].name
-            .toLowerCase()
-            .includes(query);
-          const descMatch = item.translations[lang].description
-            .toLowerCase()
-            .includes(query);
+          // Σβήνουμε τους τόνους από αυτό που γράφει ο χρήστης
+          const query = stripAccents(searchQuery.toLowerCase());
+
+          // Σβήνουμε τους τόνους από το όνομα του προϊόντος
+          const nameMatch = stripAccents(
+            item.translations[lang].name.toLowerCase(),
+          ).includes(query);
+
+          // Σβήνουμε τους τόνους από την περιγραφή του προϊόντος
+          const descMatch = stripAccents(
+            item.translations[lang].description.toLowerCase(),
+          ).includes(query);
+
           return nameMatch || descMatch;
         })
       : activeCategory === "popular"
