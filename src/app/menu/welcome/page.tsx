@@ -49,14 +49,14 @@ export default function WelcomePage() {
       </motion.header>
 
       {/* --- ΚΕΝΤΡΙΚΟ CONTAINER --- 
-          pt-8: Δίνει σταθερή, καθαρή απόσταση από το Header */}
-      <div className="flex-grow w-full max-w-md mx-auto px-4 pt-8 pb-4 flex flex-col min-h-0">
-        {/* Απλωμένο και Μεγαλωμένο Welcome Block 
-            mb-8: Δίνει ακριβώς την ίδια απόσταση προς τα κουμπιά για απόλυτη συμμετρία */}
+          pt-7: Ορίζει την απόσταση από το Header σταθερά στα 28px */}
+      <div className="flex-grow w-full max-w-md mx-auto px-4 pt-7 pb-4 flex flex-col min-h-0">
+        {/* Απλωμένο Welcome Block 
+            mb-7: Ορίζει την απόσταση προς τα κουμπιά ΕΠΙΣΗΣ στα 28px για απόλυτη συμμετρία */}
         <motion.div
           initial={{ opacity: 0, y: -10, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          className="shrink-0 bg-white/95 backdrop-blur-sm px-8 py-4 rounded-2xl shadow-lg border border-white w-full text-center mb-8"
+          className="shrink-0 bg-white/95 backdrop-blur-sm px-8 py-4 rounded-2xl shadow-lg border border-white w-full text-center mb-7"
         >
           <h1 className="text-2xl font-extrabold text-slate-800 tracking-tight">
             Welcome
@@ -66,8 +66,8 @@ export default function WelcomePage() {
           </p>
         </motion.div>
 
-        {/* Το Grid των γλωσσών (Κεντραρισμένο τέλεια στον υπόλοιπο χώρο) */}
-        <div className="flex-grow flex items-center justify-center min-h-0 w-full mb-auto">
+        {/* Το Grid των γλωσσών (Αφαιρέθηκε το ελαστικό κεντράρισμα, ακολουθεί φυσικά) */}
+        <div className="w-full min-h-0">
           <div className="grid grid-cols-2 gap-3.5 w-full">
             {availableLanguages.map((l) => (
               <motion.button
