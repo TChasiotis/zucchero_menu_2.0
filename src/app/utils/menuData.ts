@@ -114,6 +114,7 @@ import { siropiasta } from "./menu/siropiasta";
 import { iceCream } from "./menu/pagwta";
 import { pastakia } from "./menu/pastakia";
 import { croissants } from "./menu/croissants";
+import { cookies } from "./menu/koulourakia";
 
 // Η ΜΕΓΑΛΗ ΕΝΩΣΗ
 export const menuItems: MenuItem[] = [
@@ -122,4 +123,5 @@ export const menuItems: MenuItem[] = [
   ...iceCream,
   ...pastakia,
   ...croissants,
+  ...cookies,
 ];

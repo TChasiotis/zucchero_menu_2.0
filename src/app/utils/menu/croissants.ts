@@ -63,7 +63,7 @@ export const croissants: MenuItem[] = [
   },
   {
     id: "croissant_extras",
-    categoryId: "croissants", // Ή "croissants", ανάλογα τι έβαλες τελικά!
+    categoryId: "croissants",
     price: 0,
     hidePrice: true,
     translations: {
