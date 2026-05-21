@@ -38,6 +38,7 @@ export type MenuItem = {
   isGlutenFree?: boolean;
   hasCitrus?: boolean;
   isSoldOut?: boolean;
+  isSeparator?: boolean;
 };
 
 export const categories: Category[] = [
@@ -119,6 +120,9 @@ import { cookies } from "./menu/koulourakia";
 import { tsoureki } from "./menu/tsoureki";
 import { loukoumades } from "./menu/loukoumades";
 import { pies } from "./menu/pies";
+import { miniPies } from "./menu/mini_pies";
+import { breadsticks } from "./menu/breadsticks";
+import { coffee } from "./menu/coffee";
 
 // Η ΜΕΓΑΛΗ ΕΝΩΣΗ
 export const menuItems: MenuItem[] = [
@@ -131,4 +135,7 @@ export const menuItems: MenuItem[] = [
   ...tsoureki,
   ...loukoumades,
   ...pies,
+  ...miniPies,
+  ...breadsticks,
+  ...coffee,
 ];

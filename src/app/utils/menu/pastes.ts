@@ -5,6 +5,7 @@ export const pastes: MenuItem[] = [
     id: "profiterol",
     categoryId: "pastes",
     price: 3.5,
+    isSoldOut: false,
     isPopular: true,
     translations: {
       el: { name: "Προφιτερόλ", description: "Σου γεμισμένα με κρέμα πατισερί και επικάλυψη σοκολάτας" },
@@ -21,6 +22,7 @@ export const pastes: MenuItem[] = [
     id: "vegan_profiterol",
     categoryId: "pastes",
     price: 3.5,
+    isSoldOut: false,
     isVegan: true,
     translations: {
       el: { name: "Νηστίσιμο/Vegan Προφιτερόλ", description: "Σου γεμισμένα με φυτική σαντιγί και επικάλυψη σοκολάτας" },
@@ -37,6 +39,7 @@ export const pastes: MenuItem[] = [
     id: "millefeuille",
     categoryId: "pastes",
     price: 4.0,
+    isSoldOut: false,
     isPopular: true,
     hasNuts: true,
     translations: {
@@ -54,6 +57,7 @@ export const pastes: MenuItem[] = [
     id: "serrano",
     categoryId: "pastes",
     price: 3.5,
+    isSoldOut: false,
     translations: {
       el: { name: "Πάστα Σοκολατίνα (Σεράνο)", description: "Πάστα σοκολατίνα με πλούσια γεύση σοκολάτας" },
       en: { name: "Chocolate Serrano Pastry", description: "Rich chocolate pastry" },
@@ -69,6 +73,7 @@ export const pastes: MenuItem[] = [
     id: "nutella_pastry",
     categoryId: "pastes",
     price: 3.5,
+    isSoldOut: false,
     hasNuts: true,
     translations: {
       el: { name: "Πάστα Nutella", description: "Αφράτη πάστα γεμιστή με κρέμα νουτέλας" },
@@ -85,6 +90,7 @@ export const pastes: MenuItem[] = [
     id: "vanilla_chocolate",
     categoryId: "pastes",
     price: 3.5,
+    isSoldOut: false,
     translations: {
       el: { name: "Πάστα Κρέμα-Σοκολάτα", description: "Αφράτη πάστα με βανίλια και σοκολατένια κρέμα" },
       en: { name: "Vanilla-Chocolate Cream Pastry", description: "Fluffy pastry with vanilla and chocolate custard layers" },
@@ -100,6 +106,7 @@ export const pastes: MenuItem[] = [
     id: "biscuit_pastry",
     categoryId: "pastes",
     price: 3.5,
+    isSoldOut: false,
     translations: {
       el: { name: "Πάστα Μπισκότο", description: "Ελαφριά πάστα με κρέμα μπισκότου και σοκολάτα" },
       en: { name: "Biscuit Cream Pastry", description: "Light pastry with a biscuit based cream and chocolate filling" },
@@ -115,6 +122,7 @@ export const pastes: MenuItem[] = [
     id: "black_forest",
     categoryId: "pastes",
     price: 3.5,
+    isSoldOut: false,
     hasCherry: true,
     translations: {
       el: { name: "Πάστα Black Forest", description: "Πάστα σοκολάτας με στρώσεις από βύσσινα" },
@@ -131,6 +139,7 @@ export const pastes: MenuItem[] = [
     id: "lotus_biscoff",
     categoryId: "pastes",
     price: 3.5,
+    isSoldOut: false,
     translations: {
       el: { name: "Πάστα Lotus Biscoff", description: "Γλυκό με βάση και επικάλυψη από μπισκότο Lotus και κρέμα Lotus σε κυπελάκι" },
       en: { name: "Lotus Biscoff Pastry", description: "Pastry with Lotus Biscoff biscuit base and creamy Lotus topping" },
@@ -146,6 +155,7 @@ export const pastes: MenuItem[] = [
     id: "banoffee",
     categoryId: "pastes",
     price: 3.5,
+    isSoldOut: false,
     translations: {
       el: { name: "Μπανόφι", description: "Τριμένο μπισκότο με μπανάνα και καραμέλα" },
       en: { name: "Banoffee", description: "Crushed biscuits with banana and caramel" },
@@ -161,6 +171,7 @@ export const pastes: MenuItem[] = [
     id: "truffle",
     categoryId: "pastes",
     price: 3.5,
+    isSoldOut: false,
     translations: {
       el: { name: "Τρούφα", description: "Κωκ με γέμιση σοκολάτας και επικάλυψη τρούφας" },
       en: { name: "Chocolate Truffle", description: "Sponge cake filled with chocolate, covered in chocolate sprinkles" },
@@ -176,6 +187,7 @@ export const pastes: MenuItem[] = [
     id: "souffle",
     categoryId: "pastes",
     price: 3.5,
+    isSoldOut: false,
     translations: {
       el: { name: "Σουφλέ Σοκολάτας", description: "Ζεστό επιδόρπιο με μαλακό σοκολατένιο εσωτερικό" },
       en: { name: "Chocolate Soufflé", description: "Warm, soft-centered chocolate dessert" },
@@ -191,6 +203,7 @@ export const pastes: MenuItem[] = [
     id: "mosaic",
     categoryId: "pastes",
     price: 3.5,
+    isSoldOut: false,
     translations: {
       el: { name: "Κορμός/Μωσαϊκό", description: "Σπασμένα μπισκότα μαζί με σοκολάτα, μέσα σε φόρμα σχήματος κορμού" },
       en: { name: "Chocolate Log/Mosaic", description: "Crushed biscuits mixed with chocolate cream freezed in a log-like form" },
@@ -206,6 +219,7 @@ export const pastes: MenuItem[] = [
     id: "chocolate_pie",
     categoryId: "pastes",
     price: 4.0,
+    isSoldOut: false,
     translations: {
       el: { name: "Σοκολατόπιτα", description: "Ζουμερό κέικ σοκολάτας με έντονη γεύση κακάο" },
       en: { name: "Chocolate Pie", description: "Moist chocolate cake with intense cocoa flavor" },
@@ -221,6 +235,7 @@ export const pastes: MenuItem[] = [
     id: "karioka",
     categoryId: "pastes",
     price: 3.5,
+    isSoldOut: false,
     hasNuts: true,
     translations: {
       el: { name: "Καριόκα", description: "Παραδοσιακό γλυκό με κακάο και καρύδια" },
@@ -237,6 +252,7 @@ export const pastes: MenuItem[] = [
     id: "baba",
     categoryId: "pastes",
     price: 4.0,
+    isSoldOut: false,
     hasNuts: true,
     translations: {
       el: { name: "Μπαμπάς", description: "Ζυμάρι τύπου μπριός ποτισμένο με σιρόπι και ρούμι, με σαντιγί" },
@@ -253,6 +269,7 @@ export const pastes: MenuItem[] = [
     id: "tiramisu_pastry",
     categoryId: "pastes",
     price: 3.5,
+    isSoldOut: false,
     translations: {
       el: { name: "Πάστα Τιραμισού", description: "Αυθεντική γεύση τιραμισού ποτισμένη με καφέ εσπρέσο και πλούσια κρέμα μασκαρπόνε" },
       en: { name: "Tiramisu Pastry", description: "Authentic tiramisu flavor infused with espresso coffee and rich mascarpone cream" },
@@ -268,6 +285,7 @@ export const pastes: MenuItem[] = [
     id: "lemon_pie_pastry",
     categoryId: "pastes",
     price: 3.5,
+    isSoldOut: false,
     hasCitrus: true,
     translations: {
       el: { name: "Πάστα Lemon Pie", description: "Αφράτη πάστα με δροσερή κρέμα λεμονιού και επικάλυψη μαρέγκας" },
@@ -284,6 +302,7 @@ export const pastes: MenuItem[] = [
     id: "lemon_pie_cup",
     categoryId: "pastes",
     price: 3.5,
+    isSoldOut: false,
     hasCitrus: true,
     translations: {
       el: { name: "Lemon Pie με τριμμένο μπισκότο", description: "Δροσερή λεμονάτη πάστα σε κυπελάκι με κρέμα, μαρέγκα σε βάση τριμμένου μπισκότου" },
@@ -300,6 +319,7 @@ export const pastes: MenuItem[] = [
     id: "cheesecake_cup",
     categoryId: "pastes",
     price: 3.5,
+    isSoldOut: false,
     hasCherry: true,
     translations: {
       el: { name: "Cheesecake με τριμμένο μπισκότο", description: "Αφράτο cheesecake σε κυπελάκι σε βάση τριμμένου μπισκότου" },
@@ -316,6 +336,7 @@ export const pastes: MenuItem[] = [
     id: "baked_cheesecake",
     categoryId: "pastes",
     price: 4.0,
+    isSoldOut: false,
     hasCherry: true,
     translations: {
       el: { name: "Τάρτα Cheesecake Φούρνου", description: "Ψημένο cheesecake σε τραγανή βάση τάρτας" },
@@ -332,6 +353,7 @@ export const pastes: MenuItem[] = [
     id: "baked_lemon_pie",
     categoryId: "pastes",
     price: 4.0,
+    isSoldOut: false,
     hasCitrus: true,
     translations: {
       el: { name: "Τάρτα Lemon Pie Φούρνου", description: "Κλασική γεύση λεμονιού σε βάση τάρτας" },
@@ -348,6 +370,7 @@ export const pastes: MenuItem[] = [
     id: "baked_lemon_pie_no_meringue",
     categoryId: "pastes",
     price: 4.0,
+    isSoldOut: false,
     hasCitrus: true,
     translations: {
       el: { name: "Τάρτα Lemon Pie Φούρνου (χωρίς μαρέγκα)", description: "Κλασική γεύση λεμονιού σε βάση τάρτας χωρίς την κλασσική μαρέγκα" },
@@ -364,6 +387,7 @@ export const pastes: MenuItem[] = [
     id: "fruit_tart",
     categoryId: "pastes",
     price: 4.0,
+    isSoldOut: false,
     hasStrawberry: true,
     hasCherry: true,
     hasCitrus: true,
@@ -382,6 +406,7 @@ export const pastes: MenuItem[] = [
     id: "lemon_tart",
     categoryId: "pastes",
     price: 5.5,
+    isSoldOut: false,
     hasNuts: true,
     hasCitrus: true,
     translations: {
@@ -399,6 +424,7 @@ export const pastes: MenuItem[] = [
     id: "chocolate_chestnut_tart",
     categoryId: "pastes",
     price: 5.5,
+    isSoldOut: false,
     translations: {
       el: { name: "Τάρτα με Σοκολάτα και Κάστανο", description: "Πλούσια σοκολατένια γέμιση με γλυκό κάστανο" },
       en: { name: "Chocolate-Chestnut Tart", description: "Rich chocolate filling with sweet chestnut notes" },
@@ -414,6 +440,7 @@ export const pastes: MenuItem[] = [
     id: "chocolate_caramel_tart",
     categoryId: "pastes",
     price: 5.5,
+    isSoldOut: false,
     translations: {
       el: { name: "Τάρτα με Σοκολάτα και Καραμέλα", description: "Απολαυστική τάρτα με καραμέλα και σοκολάτα" },
       en: { name: "Chocolate-Caramel Tart", description: "Decadent tart with smooth caramel and chocolate praline" },
@@ -429,6 +456,7 @@ export const pastes: MenuItem[] = [
     id: "apple_pie",
     categoryId: "pastes",
     price: 3.50,
+    isSoldOut: false,
     translations: {
       el: { name: "Μηλόπιτα Παραδοσιακή", description: "Μαλακή, αφράτη ζύμη με πλούσια γέμιση από αρωματικά μήλα και κανέλα" },
       en: { name: "Traditional Apple Pie", description: "Soft, fluffy pastry crust filled with a rich filling of aromatic apples and cinnamon" },
@@ -444,6 +472,7 @@ export const pastes: MenuItem[] = [
     id: "cherry_cream_pie",
     categoryId: "pastes",
     price: 3.50,
+    isSoldOut: false,
     hasCherry: true,
     translations: {
       el: { name: "Βυσσινόπιτα με Κρέμα Παραδοσιακή", description: "Μαλακή ζύμη με πλούσια γέμιση βελούδινης κρέμας και ζουμερά βύσσινα" },
@@ -460,6 +489,7 @@ export const pastes: MenuItem[] = [
     id: "lemon_pie_traditional",
     categoryId: "pastes",
     price: 3.50,
+    isSoldOut: false,
     hasCitrus: true,
     translations: {
       el: { name: "Λεμονόπιτα Παραδοσιακή", description: "Μαλακή ζύμη με πλούσια, δροσερή και γεμάτη γέμιση από κρέμα λεμονιού" },

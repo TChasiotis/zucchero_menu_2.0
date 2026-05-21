@@ -5,6 +5,7 @@ export const croissants: MenuItem[] = [
     id: "plain_croissant",
     categoryId: "croissants", // Ή όπως αλλιώς λέγεται το id της κατηγορίας σου στα data
     price: 2.0,
+    isSoldOut: false,
     translations: {
       el: { name: "Σκέτο Κρουασάν", description: "Κλασικό, αφράτο κρουασάν βουτύρου" },
       en: { name: "Plain Croissant", description: "Classic, fluffy butter croissant" },
@@ -20,6 +21,7 @@ export const croissants: MenuItem[] = [
     id: "chocolate_croissant",
     categoryId: "croissants",
     price: 2.5,
+    isSoldOut: false,
     translations: {
       el: { name: "Κρουασάν με Σοκολάτα", description: "Κρουασάν βουτύρου με πλούσια γέμιση σοκολάτας" },
       en: { name: "Chocolate Croissant", description: "Butter croissant with rich chocolate filling" },
@@ -35,6 +37,7 @@ export const croissants: MenuItem[] = [
     id: "cream_croissant",
     categoryId: "croissants",
     price: 3.0,
+    isSoldOut: false,
     translations: {
       el: { name: "Κρουασάν με Κρέμα Πατισερί", description: "Κρουασάν βουτύρου με βελούδινη γέμιση κρέμα πατισερί" },
       en: { name: "Patisserie Cream Croissant", description: "Butter croissant with velvety patisserie cream filling" },
@@ -50,6 +53,7 @@ export const croissants: MenuItem[] = [
     id: "marble_croissant",
     categoryId: "croissants",
     price: 3.0,
+    isSoldOut: false,
     translations: {
       el: { name: "Ανάμεικτο Κρουασάν", description: "Κρουασάν με γέμιση ανάμεικτη από σοκολάτα και κρέμα πατισερί" },
       en: { name: "Marble Croissant", description: "Filled with Chocolate and Patisserie Cream Mix" },

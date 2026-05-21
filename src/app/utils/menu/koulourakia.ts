@@ -1,10 +1,28 @@
 import { MenuItem } from "../menuData";
 
 export const cookies: MenuItem[] = [
+  // --- ΚΑΡΤΑ ΠΛΗΡΟΦΟΡΙΩΝ ---
+  {
+    id: "cookies_info_general",
+    categoryId: "cookies",
+    price: 0,
+    hidePrice: true,
+    translations: {
+      el: { name: "ℹ️ Χρήσιμες Πληροφορίες", description: "Στα προϊόντα που χρεώνονται με το κιλό υπάρχει επιπλέον service fee +0.50€." },
+      en: { name: "ℹ️ Useful Information", description: "An additional +0.50€ service fee applies to products sold per kilogram." },
+      de: { name: "ℹ️ Nützliche Informationen", description: "Für Produkte, die pro Kilogramm verkauft werden, fällt eine zusätzliche Servicegebühr von +0,50 € an." },
+      fr: { name: "ℹ️ Informations utiles", description: "Des frais de service supplémentaires de +0,50 € s'appliquent aux produits vendus au kilogramme." },
+      es: { name: "ℹ️ Información útil", description: "Se aplica un cargo de servicio adicional de +0,50 € a los productos vendidos por kilógramo." },
+      sr: { name: "ℹ️ Korisne informacije", description: "Primenjuje se dodatna doplata za uslugu od +0.50€ za proizvode koji se prodaju po kilogramu." },
+      bg: { name: "ℹ️ Полезна информация", description: "Удържа се допълнителна такса за обслужване от +0.50€ за продукти, продавани на килограм." },
+      ro: { name: "ℹ️ Informații utile", description: "Se aplică o taxă suplimentară de servire de +0.50€ pentru produsele vândute la kilogram." }
+    }
+  },
   {
     id: "cookie_classic",
     categoryId: "cookies",
     price: 10.00,
+    isSoldOut: false,
     unit: "kg",
     translations: {
       el: { name: "Κλασσικά Κουλουράκια", description: "Παραδοσιακά σπιτικά κουλουράκια, ιδανικά για να συνοδεύσουν τον καφέ ή το τσάι σας" },
@@ -21,6 +39,7 @@ export const cookies: MenuItem[] = [
     id: "ptifour_jam",
     categoryId: "cookies",
     price: 12.00,
+    isSoldOut: false,
     unit: "kg",
     translations: {
       el: { name: "Πτι-Φουρ με Μαρμελάδα", description: "Αφράτα μπισκοτάκια πτι-φουρ γεμισμένα με εκλεκτή μαρμελάδα φρούτων" },
@@ -37,6 +56,7 @@ export const cookies: MenuItem[] = [
     id: "ptifour_chocolate",
     categoryId: "cookies",
     price: 12.00,
+    isSoldOut: false,
     unit: "kg",
     translations: {
       el: { name: "Πτι-Φουρ με Σοκολάτα", description: "Αφράτα μπισκοτάκια πτι-φουρ με πλούσια γέμιση και μερική επικάλυψη τρούφας σοκολάτας" },
@@ -47,23 +67,6 @@ export const cookies: MenuItem[] = [
       sr: { name: "Petit-Four with Chocolate", description: "Pti-Fur sa Čokoladom: Mekani pti-fur keksići sa bogatim čokoladnim punjenjem i delimičnim prelivom od čokoladnih mrvica" },
       bg: { name: "Petit-Four with Chocolate", description: "Пти-Фур с Шоколад: Меки бисквитки пти-фур с богат шоколадов пълнеж и частична глазура от шоколадови пръчици" },
       ro: { name: "Petit-Four cu Ciocolată", description: "Petit-Four cu Ciocolată: Biscuiți moi petit-four cu umplutură bogată de ciocolată și decorați parțial cu ornamente de ciocolată" }
-    }
-  },
-  // --- ΚΑΡΤΑ ΠΛΗΡΟΦΟΡΙΩΝ ---
-  {
-    id: "cookies_info_general",
-    categoryId: "cookies",
-    price: 0,
-    hidePrice: true,
-    translations: {
-      el: { name: "ℹ️ Χρήσιμες Πληροφορίες", description: "Στα προϊόντα που χρεώνονται με το κιλό υπάρχει επιπλέον service fee +0.50€." },
-      en: { name: "ℹ️ Useful Information", description: "An additional +0.50€ service fee applies to products sold per kilogram." },
-      de: { name: "ℹ️ Nützliche Informationen", description: "Für Produkte, die pro Kilogramm verkauft werden, fällt eine zusätzliche Servicegebühr von +0,50 € an." },
-      fr: { name: "ℹ️ Informations utiles", description: "Des frais de service supplémentaires de +0,50 € s'appliquent aux produits vendus au kilogramme." },
-      es: { name: "ℹ️ Información útil", description: "Se aplica un cargo de servicio adicional de +0,50 € a los productos vendidos por kilógramo." },
-      sr: { name: "ℹ️ Korisne informacije", description: "Primenjuje se dodatna doplata za uslugu od +0.50€ za proizvode koji se prodaju po kilogramu." },
-      bg: { name: "ℹ️ Полезна информация", description: "Удържа се допълнителна такса за обслужване от +0.50€ за продукти, продавани на килограм." },
-      ro: { name: "ℹ️ Informații utile", description: "Se aplică o taxă suplimentară de servire de +0.50€ pentru produsele vândute la kilogram." }
     }
   }
 ];

@@ -311,82 +311,102 @@ export default function MenuClient({
             exit={{ opacity: 0, y: -20 }}
             className="flex flex-col gap-4"
           >
-            {activeItems.length > 0 ? (
-              activeItems.map((item) => (
-                <div
-                  key={item.id}
-                  className="bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-sm border border-white/50 flex flex-col hover:shadow-md transition-shadow"
-                >
-                  <div className="flex justify-between items-center">
-                    <div className="pr-4">
-                      <h3 className="text-lg font-bold text-slate-800">
-                        {item.translations[lang].name}
-                      </h3>
-                      <p className="text-sm text-slate-500 mt-1 leading-snug">
-                        {item.translations[lang].description}
-                      </p>
-                    </div>
-                    {!item.hidePrice && (
-                      <div className="bg-[#97dcf5]/20 px-3 py-2 rounded-xl whitespace-nowrap shadow-sm flex items-baseline gap-1">
-                        <span className="font-bold text-slate-800 text-lg">
-                          {item.price.toFixed(2)}€
-                        </span>
+            {activeItems.filter((item) => !item.isSoldOut).length > 0 ? (
+              activeItems
+                .filter((item) => !item.isSoldOut)
+                .map((item) =>
+                  item.isSeparator ? (
+                    /* ----- ΝΕΟ MINIMAL ΔΙΑΧΩΡΙΣΤΙΚΟ: SUPER ΛΕΠΤΗ ΓΡΑΜΜΗ 0.5px ΚΑΙ CUSTOM ΧΡΩΜΑ ----- */
+                    /* ----- SUPER ΛΕΠΤΗ ΓΡΑΜΜΗ ΜΕ CSS SCALE HACK ----- */
+                    <div
+                      key={item.id}
+                      className="w-full my-6 opacity-80"
+                      style={{
+                        height: "1px",
+                        backgroundColor: "rgb(151, 220, 245)",
+                        transform:
+                          "scaleY(0.4)" /* <--- ΤΟ ΜΥΣΤΙΚΟ ΓΙΑ ΝΑ ΓΙΝΕΙ ΜΙΣΟ PIXEL! */,
+                      }}
+                    />
+                  ) : (
+                    /* ----- UI ΚΑΝΟΝΙΚΟΥ ΠΡΟΪΟΝΤΟΣ ----- */
+                    <div
+                      key={item.id}
+                      className="bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-sm border border-white/50 flex flex-col hover:shadow-md transition-shadow"
+                    >
+                      <div className="flex justify-between items-center">
+                        <div className="pr-4">
+                          <h3 className="text-lg font-bold text-slate-800">
+                            {item.translations[lang].name}
+                          </h3>
+                          {item.translations[lang].description && (
+                            <p className="text-sm text-slate-500 mt-1 leading-snug">
+                              {item.translations[lang].description}
+                            </p>
+                          )}
+                        </div>
+                        {!item.hidePrice && (
+                          <div className="bg-[#97dcf5]/20 px-3 py-2 rounded-xl whitespace-nowrap shadow-sm flex items-baseline gap-1">
+                            <span className="font-bold text-slate-800 text-lg">
+                              {item.price.toFixed(2)}€
+                            </span>
 
-                        {item.unit === "kg" && (
-                          <span className="text-xs font-bold text-slate-600">
-                            {ui.perKg}
-                          </span>
-                        )}
+                            {item.unit === "kg" && (
+                              <span className="text-xs font-bold text-slate-600">
+                                {ui.perKg}
+                              </span>
+                            )}
 
-                        {item.unit === "portion" && (
-                          <span className="text-xs font-bold text-slate-600">
-                            {ui.perPortion}
-                          </span>
+                            {item.unit === "portion" && (
+                              <span className="text-xs font-bold text-slate-600">
+                                {ui.perPortion}
+                              </span>
+                            )}
+                          </div>
                         )}
                       </div>
-                    )}
-                  </div>
-                  {(item.isVegan ||
-                    item.hasNuts ||
-                    item.hasStrawberry ||
-                    item.hasCherry ||
-                    item.isGlutenFree ||
-                    item.hasCitrus) && (
-                    <div className="flex flex-wrap gap-2 mt-3 pt-3 border-t border-slate-100/50">
-                      {item.isVegan && (
-                        <span className="flex items-center gap-1 text-[10px] font-bold bg-green-100 text-green-700 px-2 py-1 rounded-md shadow-sm">
-                          🌱 {ui.vegan}
-                        </span>
-                      )}
-                      {item.hasNuts && (
-                        <span className="flex items-center gap-1 text-[10px] font-bold bg-orange-100 text-orange-700 px-2 py-1 rounded-md shadow-sm">
-                          🥜 {ui.nuts}
-                        </span>
-                      )}
-                      {item.isGlutenFree && (
-                        <span className="flex items-center gap-1 text-[10px] font-bold bg-blue-100 text-blue-700 px-2 py-1 rounded-md shadow-sm">
-                          🌾 {ui.glutenFree}
-                        </span>
-                      )}
-                      {item.hasCitrus && (
-                        <span className="flex items-center gap-1 text-[10px] font-bold bg-yellow-100 text-yellow-700 px-2 py-1 rounded-md shadow-sm">
-                          🍋 {ui.citrus}
-                        </span>
-                      )}
-                      {item.hasStrawberry && (
-                        <span className="flex items-center gap-1 text-[10px] font-bold bg-red-100 text-red-700 px-2 py-1 rounded-md shadow-sm">
-                          🍓 {ui.strawberry}
-                        </span>
-                      )}
-                      {item.hasCherry && (
-                        <span className="flex items-center gap-1 text-[10px] font-bold bg-rose-100 text-rose-700 px-2 py-1 rounded-md shadow-sm">
-                          🍒 {ui.cherry}
-                        </span>
+                      {(item.isVegan ||
+                        item.hasNuts ||
+                        item.hasStrawberry ||
+                        item.hasCherry ||
+                        item.isGlutenFree ||
+                        item.hasCitrus) && (
+                        <div className="flex flex-wrap gap-2 mt-3 pt-3 border-t border-slate-100/50">
+                          {item.isVegan && (
+                            <span className="flex items-center gap-1 text-[10px] font-bold bg-green-100 text-green-700 px-2 py-1 rounded-md shadow-sm">
+                              🌱 {ui.vegan}
+                            </span>
+                          )}
+                          {item.hasNuts && (
+                            <span className="flex items-center gap-1 text-[10px] font-bold bg-orange-100 text-orange-700 px-2 py-1 rounded-md shadow-sm">
+                              🥜 {ui.nuts}
+                            </span>
+                          )}
+                          {item.isGlutenFree && (
+                            <span className="flex items-center gap-1 text-[10px] font-bold bg-blue-100 text-blue-700 px-2 py-1 rounded-md shadow-sm">
+                              🌾 {ui.glutenFree}
+                            </span>
+                          )}
+                          {item.hasCitrus && (
+                            <span className="flex items-center gap-1 text-[10px] font-bold bg-yellow-100 text-yellow-700 px-2 py-1 rounded-md shadow-sm">
+                              🍋 {ui.citrus}
+                            </span>
+                          )}
+                          {item.hasStrawberry && (
+                            <span className="flex items-center gap-1 text-[10px] font-bold bg-red-100 text-red-700 px-2 py-1 rounded-md shadow-sm">
+                              🍓 {ui.strawberry}
+                            </span>
+                          )}
+                          {item.hasCherry && (
+                            <span className="flex items-center gap-1 text-[10px] font-bold bg-rose-100 text-rose-700 px-2 py-1 rounded-md shadow-sm">
+                              🍒 {ui.cherry}
+                            </span>
+                          )}
+                        </div>
                       )}
                     </div>
-                  )}
-                </div>
-              ))
+                  ),
+                )
             ) : (
               <div className="text-center bg-white/80 rounded-2xl p-8 border border-white/50 shadow-sm mt-4">
                 <Search size={40} className="mx-auto text-slate-300 mb-3" />

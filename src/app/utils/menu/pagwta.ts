@@ -2,9 +2,26 @@ import { MenuItem } from "../menuData";
 
 export const iceCream: MenuItem[] = [
   {
+    id: "ice_cream_info_general",
+    categoryId: "ice_cream",
+    price: 0,
+    hidePrice: true,
+    translations: {
+      el: { name: "ℹ️ Χρήσιμες Πληροφορίες", description: "Το παγωτό είναι self-service (παραγγελία και παραλαβή από το ψυγείο του καταστήματος). Μπορείτε να συνδυάσετε δύο γεύσεις στην ίδια μπάλα, αν το επιθυμείτε. Τα σορμπέ φρούτων και η μαύρη σοκολάτα είναι vegan (φτιάχνονται με νερό αντί για γάλα). Στα προϊόντα που χρεώνονται με το κιλό υπάρχει επιπλέον service fee +0.50€." },
+      en: { name: "ℹ️ Useful Information", description: "Ice cream is self-service (order and pick up from the display fridge). You can combine two flavors in a single scoop if desired. Fruit sorbets and dark chocolate are vegan (made with water instead of milk). An additional +0.50€ service fee applies to products sold per kilogram." },
+      de: { name: "ℹ️ Nützliche Informationen", description: "Eiscreme ist Selbstbedienung (Bestellung und Abholung an der Theke). Sie können auf Wunsch zwei Sorten in einer Kugel kombinieren. Fruchtsorbets und dunkle Schokolade sind vegan (mit Wasser statt Milch hergestellt). Für Produkte, die pro Kilogramm verkauft werden, fällt eine zusätzliche Servicegebühr von +0,50 € an." },
+      fr: { name: "ℹ️ Informations utiles", description: "La glace est en libre-service (commande et retrait au comptoir). Vous pouvez combiner deux parfums dans une seule boule si vous le souhaitez. Les sorbets aux fruits et le chocolat noir sont végétaliens (faits avec de l'eau au lieu de lait). Des frais de service supplémentaires de +0,50 € s'appliquent aux produits vendus au kilogramme." },
+      es: { name: "ℹ️ Información útil", description: "El helado es autoservicio (pedido y recogida en el mostrador). Puede combinar dos sabores en una sola bola si lo desea. Los sorbetes de frutas y el helado de chocolate negro son veganos (hechos con agua en lugar de leche). Se aplica un cargo de servicio adicional de +0,50 € a los productos vendidos por kilógramo." },
+      sr: { name: "ℹ️ Korisne informacije", description: "Sladoled je samousluga (poručivanje i preuzimanje na vitrini). Možete kombinovati dva ukusa u jednoj kugli ako želite. Voćni sorbei i crna čokolada su veganski (napravljeni sa vodom umesto mleka). Primenjuje se dodatna doplata za uslugu od +0.50€ za proizvode koji se prodaju po kilogramu." },
+      bg: { name: "ℹ️ Полезна информация", description: "Сладоледът е на самообслужване (поръчка и вземане от витрината). Можете да комбинирате два вкуса в една топка, ако желаете. Плодовите сорбета и черният шоколад са веган (направени с вода вместо мляко). Удържа се допълнителна такса за обслужване от +0.50€ за продукти, продавани на килограм." },
+      ro: { name: "ℹ️ Informații utile", description: "Înghețata este în sistem autoservire (comandă și ridicare de la vitrină). Puteți combina două arome într-o singură cupă dacă doriți. Sorbetele de fructe și înghețata de ciocolată neagră sunt vegane (făcute cu apă în loc de lapte). Se aplică o taxă suplimentară de servire de +0.50€ pentru produsele vândute la kilogram." }
+    }
+  },
+  {
     id: "ice_cream_1_scoop",
     categoryId: "ice_cream",
     price: 2.00,
+    isSoldOut: false,
     translations: {
       el: { name: "Παγωτό - Μία Μπάλα", description: "Επιλέξτε έως 2 γεύσεις. Σε χωνάκι ή κυπελλάκι." },
       en: { name: "Ice Cream - 1 Scoop", description: "Choose up to 2 flavors. In a cone or cup." },
@@ -20,6 +37,7 @@ export const iceCream: MenuItem[] = [
     id: "ice_cream_2_scoops",
     categoryId: "ice_cream",
     price: 3.50,
+    isSoldOut: false,
     translations: {
       el: { name: "Παγωτό - Δύο Μπάλες", description: "Επιλέξτε έως 4 γεύσεις. Σε χωνάκι ή κυπελλάκι." },
       en: { name: "Ice Cream - 2 Scoops", description: "Choose up to 4 flavors. In a cone or cup." },
@@ -35,6 +53,7 @@ export const iceCream: MenuItem[] = [
     id: "ice_cream_3_scoops",
     categoryId: "ice_cream",
     price: 5.00,
+    isSoldOut: false,
     translations: {
       el: { name: "Παγωτό - Τρεις Μπάλες", description: "Επιλέξτε έως 6 γεύσεις. Σε κυπελλάκι." },
       en: { name: "Ice Cream - 3 Scoops", description: "Choose up to 6 flavors. In a cup." },
@@ -50,6 +69,7 @@ export const iceCream: MenuItem[] = [
     id: "mini_ice_cream_piece",
     categoryId: "ice_cream",
     price: 1.20,
+    isSoldOut: false,
     translations: {
       el: { name: "Παγωτίνι", description: "Μια δροσερή μπουκιά παγωτού." },
       en: { name: "Mini Ice Cream", description: "A refreshing ice cream bite." },
@@ -66,6 +86,7 @@ export const iceCream: MenuItem[] = [
     categoryId: "ice_cream",
     price: 15.00,
     unit: "kg",
+    isSoldOut: false,
     translations: {
       el: { name: "Παγωτό Χύμα (Πακέτο Κιλού)", description: "Επιλέξτε τις γεύσεις της αρεσκείας σας σε συσκευασία." },
       en: { name: "Ice Cream Package", description: "Choose your favorite flavors in a package." },
@@ -82,6 +103,7 @@ export const iceCream: MenuItem[] = [
     categoryId: "ice_cream",
     price: 15.00,
     unit: "kg",
+    isSoldOut: false,
     translations: {
       el: { name: "Παγωτίνια (Πακέτο Κιλού)", description: "Επιλέξτε τα παγωτίνια της αρεσκείας σας σε συσκευασία." },
       en: { name: "Mini Ice Creams Package", description: "Choose your favorite mini ice creams in a package." },
@@ -98,6 +120,7 @@ export const iceCream: MenuItem[] = [
     categoryId: "ice_cream", 
     price: 0,
     hidePrice: true,
+    isSoldOut: false,
     translations: {
       el: { 
         name: "Extras: Σιρόπι Σοκολάτας, Σιρόπι Καραμέλας, Σιρόπι Φράουλας", 
@@ -131,22 +154,6 @@ export const iceCream: MenuItem[] = [
         name: "Extras: Chocolate Syrup, Caramel Syrup, Strawberry Syrup", 
         description: "Extras: Sirop de Ciocolată, Sirop de Caramel, Sirop de Căpșuni" 
       }
-    }
-  },
-  {
-    id: "ice_cream_info_general",
-    categoryId: "ice_cream",
-    price: 0,
-    hidePrice: true,
-    translations: {
-      el: { name: "ℹ️ Χρήσιμες Πληροφορίες", description: "Το παγωτό είναι self-service (παραγγελία και παραλαβή από το ψυγείο του καταστήματος). Μπορείτε να συνδυάσετε δύο γεύσεις στην ίδια μπάλα, αν το επιθυμείτε. Τα σορμπέ φρούτων και η μαύρη σοκολάτα είναι vegan (φτιάχνονται με νερό αντί για γάλα). Στα προϊόντα που χρεώνονται με το κιλό υπάρχει επιπλέον service fee +0.50€." },
-      en: { name: "ℹ️ Useful Information", description: "Ice cream is self-service (order and pick up from the display fridge). You can combine two flavors in a single scoop if desired. Fruit sorbets and dark chocolate are vegan (made with water instead of milk). An additional +0.50€ service fee applies to products sold per kilogram." },
-      de: { name: "ℹ️ Nützliche Informationen", description: "Eiscreme ist Selbstbedienung (Bestellung und Abholung an der Theke). Sie können auf Wunsch zwei Sorten in einer Kugel kombinieren. Fruchtsorbets und dunkle Schokolade sind vegan (mit Wasser statt Milch hergestellt). Für Produkte, die pro Kilogramm verkauft werden, fällt eine zusätzliche Servicegebühr von +0,50 € an." },
-      fr: { name: "ℹ️ Informations utiles", description: "La glace est en libre-service (commande et retrait au comptoir). Vous pouvez combiner deux parfums dans une seule boule si vous le souhaitez. Les sorbets aux fruits et le chocolat noir sont végétaliens (faits avec de l'eau au lieu de lait). Des frais de service supplémentaires de +0,50 € s'appliquent aux produits vendus au kilogramme." },
-      es: { name: "ℹ️ Información útil", description: "El helado es autoservicio (pedido y recogida en el mostrador). Puede combinar dos sabores en una sola bola si lo desea. Los sorbetes de frutas y el helado de chocolate negro son veganos (hechos con agua en lugar de leche). Se aplica un cargo de servicio adicional de +0,50 € a los productos vendidos por kilógramo." },
-      sr: { name: "ℹ️ Korisne informacije", description: "Sladoled je samousluga (poručivanje i preuzimanje na vitrini). Možete kombinovati dva ukusa u jednoj kugli ako želite. Voćni sorbei i crna čokolada su veganski (napravljeni sa vodom umesto mleka). Primenjuje se dodatna doplata za uslugu od +0.50€ za proizvode koji se prodaju po kilogramu." },
-      bg: { name: "ℹ️ Полезна информация", description: "Сладоледът е на самообслужване (поръчка и вземане от витрината). Можете да комбинирате два вкуса в една топка, ако желаете. Плодовите сорбета и черният шоколад са веган (направени с вода вместо мляко). Удържа се допълнителна такса за обслужване от +0.50€ за продукти, продавани на килограм." },
-      ro: { name: "ℹ️ Informații utile", description: "Înghețata este în sistem autoservire (comandă și ridicare de la vitrină). Puteți combina două arome într-o singură cupă dacă doriți. Sorbetele de fructe și înghețata de ciocolată neagră sunt vegane (făcute cu apă în loc de lapte). Se aplică o taxă suplimentară de servire de +0.50€ pentru produsele vândute la kilogram." }
     }
   }
 ];
