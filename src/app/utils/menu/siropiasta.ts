@@ -2,6 +2,31 @@ import { MenuItem } from "../menuData";
 
 export const siropiasta: MenuItem[] = [
   {
+    id: "siropiasta_info_general",
+    categoryId: "siropiasta",
+    price: 0,
+    hidePrice: true,
+    translations: {
+      el: { name: "ℹ️ Χρήσιμες Πληροφορίες", description: "Στα προϊόντα που χρεώνονται με το κιλό υπάρχει επιπλέον service fee +0.50€." },
+      en: { name: "ℹ️ Useful Information", description: "An additional +0.50€ service fee applies to products sold per kilogram." },
+      de: { name: "ℹ️ Nützliche Informationen", description: "Für Produkte, die pro Kilogramm verkauft werden, fällt eine zusätzliche Servicegebühr von +0,50 € an." },
+      fr: { name: "ℹ️ Informations utiles", description: "Des frais de service supplémentaires de +0,50 € s'appliquent aux produits vendus au kilogramme." },
+      es: { name: "ℹ️ Información útil", description: "Se aplica un cargo de servicio adicional de +0,50 € a los productos vendidos por kilógramo." },
+      sr: { name: "ℹ️ Korisne informacije", description: "Primenjuje se dodatna doplata za uslugu od +0.50€ za proizvode koji se prodaju po kilogramu." },
+      bg: { name: "ℹ️ Полезна информация", description: "Удържа се допълнителна такса за обслужване από +0.50€ за продукти, продавани на килограм." },
+      ro: { name: "ℹ️ Informații utile", description: "Se aplică o taxă suplimentară de servire de +0.50€ pentru produsele vândute la kilogram." }
+    }
+  },
+  {
+    id: "separator_srpst_info",
+    categoryId: "siropiasta",
+    price: 0,
+    hidePrice: true,
+    isSeparator: true,
+    isSoldOut: false,
+    translations: { el: { name: "", description: "" }, en: { name: "", description: "" }, de: { name: "", description: "" }, fr: { name: "", description: "" }, es: { name: "", description: "" }, sr: { name: "", description: "" }, bg: { name: "", description: "" }, ro: { name: "", description: "" } }
+  },
+  {
     id: "baklava",
     categoryId: "siropiasta",
     price: 14.00,
@@ -183,9 +208,19 @@ export const siropiasta: MenuItem[] = [
     },
   },
   {
+    id: "separator_srpst_piece",
+    categoryId: "siropiasta",
+    price: 0,
+    hidePrice: true,
+    isSeparator: true,
+    isSoldOut: false,
+    translations: { el: { name: "", description: "" }, en: { name: "", description: "" }, de: { name: "", description: "" }, fr: { name: "", description: "" }, es: { name: "", description: "" }, sr: { name: "", description: "" }, bg: { name: "", description: "" }, ro: { name: "", description: "" } }
+  },
+  {
     id: "revani",
     categoryId: "siropiasta",
     price: 3.50,
+    isSoldOut: false,
     translations: {
       el: { name: "Ρεβανί", description: "Κέικ με σιμιγδάλι, εμποτισμένο με σιρόπι" },
       en: { name: "Revani", description: "Semolina sponge cake soaked in syrup" },
@@ -201,6 +236,7 @@ export const siropiasta: MenuItem[] = [
     id: "portokalopita",
     categoryId: "siropiasta",
     price: 3.50,
+    isSoldOut: false,
     hasNuts: true,   
     hasCitrus: true, 
     translations: {
@@ -218,6 +254,7 @@ export const siropiasta: MenuItem[] = [
     id: "karidopita",
     categoryId: "siropiasta",
     price: 3.50,
+    isSoldOut: false,
     hasNuts: true,
     translations: {
       el: { name: "Καρυδόπιτα", description: "Κέικ με καρύδια και σιρόπι" },
@@ -234,6 +271,7 @@ export const siropiasta: MenuItem[] = [
     id: "ekmekkataifi",
     categoryId: "siropiasta",
     price: 4.00,
+    isSoldOut: false,
     hasNuts: true,
     translations: {
       el: { name: "Εκμέκ Κανταΐφι", description: "Καταΐφι με στρώση κρέμας και σιρόπι" },
@@ -250,6 +288,7 @@ export const siropiasta: MenuItem[] = [
     id: "ekmekrevani",
     categoryId: "siropiasta",
     price: 4.00,
+    isSoldOut: false,
     translations: {
       el: { name: "Εκμέκ Ρεβανί", description: "Ρεβανί με στρώση κρέμας και σιρόπι" },
       en: { name: "Ekmek Revani", description: "Revani sponge cake layered with custard and syrup" },
@@ -262,19 +301,28 @@ export const siropiasta: MenuItem[] = [
     },
   },
   {
-    id: "siropiasta_info_general",
+    id: "separator_srpst_extras",
     categoryId: "siropiasta",
     price: 0,
     hidePrice: true,
+    isSeparator: true,
+    isSoldOut: false,
+    translations: { el: { name: "", description: "" }, en: { name: "", description: "" }, de: { name: "", description: "" }, fr: { name: "", description: "" }, es: { name: "", description: "" }, sr: { name: "", description: "" }, bg: { name: "", description: "" }, ro: { name: "", description: "" } }
+  },
+  {
+    id: "siropiasta_extra_ice_cream",
+    categoryId: "siropiasta",
+    price: 2.00,
+    isSoldOut: false,
     translations: {
-      el: { name: "ℹ️ Χρήσιμες Πληροφορίες", description: "Στα προϊόντα που χρεώνονται με το κιλό υπάρχει επιπλέον service fee +0.50€." },
-      en: { name: "ℹ️ Useful Information", description: "An additional +0.50€ service fee applies to products sold per kilogram." },
-      de: { name: "ℹ️ Nützliche Informationen", description: "Für Produkte, die pro Kilogramm verkauft werden, fällt eine zusätzliche Servicegebühr von +0,50 € an." },
-      fr: { name: "ℹ️ Informations utiles", description: "Des frais de service supplémentaires de +0,50 € s'appliquent aux produits vendus au kilogramme." },
-      es: { name: "ℹ️ Información útil", description: "Se aplica un cargo de servicio adicional de +0,50 € a los productos vendidos por kilógramo." },
-      sr: { name: "ℹ️ Korisne informacije", description: "Primenjuje se dodatna doplata za uslugu od +0.50€ za proizvode koji se prodaju po kilogramu." },
-      bg: { name: "ℹ️ Полезна информация", description: "Удържа се допълнителна такса за обслужване από +0.50€ за продукти, продавани на килограм." },
-      ro: { name: "ℹ️ Informații utile", description: "Se aplică o taxă suplimentară de servire de +0.50€ pentru produsele vândute la kilogram." }
+      el: { name: "Μπάλα Παγωτό (Στο γλυκό)", description: "" },
+      en: { name: "Ice Cream Scoop (With dessert)", description: "" },
+      de: { name: "Ice Cream Scoop (With dessert)", description: "Eiskugel (Zum Dessert)" },
+      fr: { name: "Ice Cream Scoop (With dessert)", description: "Boule de Glace (Avec le dessert)" },
+      es: { name: "Ice Cream Scoop (With dessert)", description: "Bola de Helado (Con el postre)" },
+      sr: { name: "Ice Cream Scoop (With dessert)", description: "Kugla Sladoleda (Uz desert)" },
+      bg: { name: "Ice Cream Scoop (With dessert)", description: "Топка Сладолед (Към десерта)" },
+      ro: { name: "Ice Cream Scoop (With dessert)", description: "Cupă de Înghețată (Cu desertul)" }
     }
   }
 ];

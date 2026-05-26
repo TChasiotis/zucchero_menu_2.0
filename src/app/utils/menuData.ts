@@ -1,6 +1,7 @@
 // Εξηγούμε στην TypeScript πώς μοιάζει η ΠΟΛΥΓΛΩΣΣΗ Κατηγορία
 export type Category = {
   id: string;
+  isNotAvailable?: boolean;
   translations: {
     el: string;
     en: string;
@@ -54,7 +55,7 @@ export const categories: Category[] = [
     id: "siropiasta", translations: { el: "Σιροπιαστά", en: "Syrup Sweets", de: "Sirup-Süßigkeiten", fr: "Desserts au Sirop", es: "Dulces en Almíbar", sr: "Zaliveni kolači", bg: "Сиропирани сладкиши", ro: "Dulciuri cu Sirop" } 
   },
   { 
-    id: "ice_cream", translations: { el: "Παγωτό", en: "Ice Cream", de: "Eiscreme", fr: "Glace", es: "Helado", sr: "Sladoled", bg: "Сладолед", ro: "Înghețată" } 
+    id: "ice_cream", isNotAvailable: true, translations: { el: "Παγωτό", en: "Ice Cream", de: "Eiscreme", fr: "Glace", es: "Helado", sr: "Sladoled", bg: "Сладолед", ro: "Înghețată" } 
   },
   { 
     id: "pastakia", translations: { el: "Παστάκια", en: "Mini Pastries", de: "Mini-Gebäck", fr: "Mini-Pâtisseries", es: "Mini Pasteles", sr: "Mini Kolači", bg: "Мини Пасти", ro: "Mini Prăjituri" } 
@@ -104,10 +105,7 @@ export const categories: Category[] = [
   },
   { 
     id: "alcohol", translations: { el: "Αλκοολούχα", en: "Alcohol", de: "Alkoholische Getränke", fr: "Alcool", es: "Bebidas Alcohólicas", sr: "Alkoholna pića", bg: "Алкохол", ro: "Băuturi Alcoolice" } 
-  },
-  { 
-    id: "dairy", translations: { el: "Γαλακτοκομικά", en: "Dairy", de: "Milchprodukte", fr: "Produits Laitiers", es: "Lácteos", sr: "Mlečni proizvodi", bg: "Млечни продукти", ro: "Lactate" } 
-  },
+  }
 ];
 
 // ΕΙΣΑΓΩΓΗ ΤΩΝ ΜΟΝΤΟΥΛΑΡΙΣΜΕΝΩΝ ΑΡΧΕΙΩΝ
@@ -123,6 +121,12 @@ import { pies } from "./menu/pies";
 import { miniPies } from "./menu/mini_pies";
 import { breadsticks } from "./menu/breadsticks";
 import { coffee } from "./menu/coffee";
+import { softDrinks } from "./menu/soft_drinks";
+import { juices } from "./menu/juices";
+import { cold_bev } from "./menu/cold_bev";
+/*import { hotDrinks } from "./menu/hot_drinks";
+import { giagiamas } from "./menu/giagiamas";
+import { alcohol } from "./menu/alcohol";*/
 
 // Η ΜΕΓΑΛΗ ΕΝΩΣΗ
 export const menuItems: MenuItem[] = [
@@ -138,4 +142,10 @@ export const menuItems: MenuItem[] = [
   ...miniPies,
   ...breadsticks,
   ...coffee,
+  ...softDrinks,
+  ...juices,
+  ...cold_bev,
+  /*...hotDrinks,
+  ...giagiamas,
+  ...alcohol,*/
 ];

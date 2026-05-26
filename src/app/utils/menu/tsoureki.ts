@@ -1,6 +1,32 @@
 import { MenuItem } from "../menuData";
 
 export const tsoureki: MenuItem[] = [
+  // --- ΚΑΡΤΑ ΠΛΗΡΟΦΟΡΙΩΝ ---
+  {
+    id: "tsoureki_info_general",
+    categoryId: "tsoureki",
+    price: 0,
+    hidePrice: true,
+    translations: {
+      el: { name: "ℹ️ Χρήσιμες Πληροφορίες", description: "Στα προϊόντα που χρεώνονται με το κιλό υπάρχει επιπλέον service fee +0.50€." },
+      en: { name: "ℹ️ Useful Information", description: "An additional +0.50€ service fee applies to products sold per kilogram." },
+      de: { name: "ℹ️ Nützliche Informationen", description: "Für Produkte, die pro Kilogramm verkauft werden, fällt eine zusätzliche Servicegebühr von +0,50 € an." },
+      fr: { name: "ℹ️ Informations utiles", description: "Des frais de service supplémentaires de +0,50 € s'appliquent aux produits vendus au kilogramme." },
+      es: { name: "ℹ️ Información útil", description: "Se aplica un cargo de servicio adicional de +0,50 € a los productos vendidos por kilógramo." },
+      sr: { name: "ℹ️ Korisne informacije", description: "Primenjuje se dodatna doplata za uslugu od +0.50€ za proizvode koji se prodaju po kilogramu." },
+      bg: { name: "ℹ️ Полезна информация", description: "Удържа се допълнителна такса за обслужване от +0.50€ за продукти, продавани на килограм." },
+      ro: { name: "ℹ️ Informații utile", description: "Se aplică o taxă suplimentară de servire de +0.50€ pentru produsele vândute la kilogram." }
+    }
+  },
+  {
+    id: "separator_tsrk_info",
+    categoryId: "tsoureki",
+    price: 0,
+    hidePrice: true,
+    isSeparator: true,
+    isSoldOut: false,
+    translations: { el: { name: "", description: "" }, en: { name: "", description: "" }, de: { name: "", description: "" }, fr: { name: "", description: "" }, es: { name: "", description: "" }, sr: { name: "", description: "" }, bg: { name: "", description: "" }, ro: { name: "", description: "" } }
+  },
   {
     id: "tsoureki_classic",
     categoryId: "tsoureki",
@@ -51,23 +77,6 @@ export const tsoureki: MenuItem[] = [
       sr: { name: "Vegan Tsoureki", description: "Posni Cureki: Mekan i mirisan cureki napravljen u potpunosti od sastojaka biljnog porekla" },
       bg: { name: "Vegan Tsoureki", description: "Постно Цуреки: Мек и ароматен цуреки, приготвен изцяло от растителни съставки" },
       ro: { name: "Vegan Tsoureki", description: "Cozonac Grec de Post: Cozonac moale și aromat preparat în întregime din ingrediente pe bază de plante" }
-    }
-  },
-  // --- ΚΑΡΤΑ ΠΛΗΡΟΦΟΡΙΩΝ ---
-  {
-    id: "tsoureki_info_general",
-    categoryId: "tsoureki",
-    price: 0,
-    hidePrice: true,
-    translations: {
-      el: { name: "ℹ️ Χρήσιμες Πληροφορίες", description: "Στα προϊόντα που χρεώνονται με το κιλό υπάρχει επιπλέον service fee +0.50€." },
-      en: { name: "ℹ️ Useful Information", description: "An additional +0.50€ service fee applies to products sold per kilogram." },
-      de: { name: "ℹ️ Nützliche Informationen", description: "Für Produkte, die pro Kilogramm verkauft werden, fällt eine zusätzliche Servicegebühr von +0,50 € an." },
-      fr: { name: "ℹ️ Informations utiles", description: "Des frais de service supplémentaires de +0,50 € s'appliquent aux produits vendus au kilogramme." },
-      es: { name: "ℹ️ Información útil", description: "Se aplica un cargo de servicio adicional de +0,50 € a los productos vendidos por kilógramo." },
-      sr: { name: "ℹ️ Korisne informacije", description: "Primenjuje se dodatna doplata za uslugu od +0.50€ za proizvode koji se prodaju po kilogramu." },
-      bg: { name: "ℹ️ Полезна информация", description: "Удържа се допълнителна такса за обслужване от +0.50€ за продукти, продавани на килограм." },
-      ro: { name: "ℹ️ Informații utile", description: "Se aplică o taxă suplimentară de servire de +0.50€ pentru produsele vândute la kilogram." }
     }
   }
 ];

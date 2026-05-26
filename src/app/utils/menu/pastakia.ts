@@ -4,7 +4,7 @@ export const pastakia: MenuItem[] = [
   // --- ΠΟΤΗΡΑΚΙΑ (ΠΡΑΛΙΝΕΣ - GLUTEN FREE) ---
   // --- ΠΟΤΗΡΑΚΙΑ (ΠΡΑΛΙΝΕΣ - GLUTEN FREE) ---
   {
-    id: "pastaki_caramel",
+    id: "pastaki_caramel_cup",
     categoryId: "pastakia",
     price: 1.50,
     isSoldOut: false,
@@ -21,7 +21,7 @@ export const pastakia: MenuItem[] = [
     }
   },
   {
-    id: "pastaki_chocolate",
+    id: "pastaki_chocolate_cup",
     categoryId: "pastakia",
     price: 1.50,
     isSoldOut: false,
@@ -38,7 +38,7 @@ export const pastakia: MenuItem[] = [
     }
   },
   {
-    id: "pastaki_chocolate_trilogy",
+    id: "pastaki_chocolate_trilogy_cup",
     categoryId: "pastakia",
     price: 1.50,
     isSoldOut: false,
@@ -55,7 +55,7 @@ export const pastakia: MenuItem[] = [
     }
   },
   {
-    id: "pastaki_strawberry_chocolate",
+    id: "pastaki_strawberry_chocolate_cup",
     categoryId: "pastakia",
     price: 1.50,
     isSoldOut: false,
@@ -73,7 +73,7 @@ export const pastakia: MenuItem[] = [
     }
   },
   {
-    id: "pastaki_cream_strawberry",
+    id: "pastaki_cream_strawberry_cup",
     categoryId: "pastakia",
     price: 1.50,
     isGlutenFree: true,
@@ -91,7 +91,7 @@ export const pastakia: MenuItem[] = [
     }
   },
   {
-    id: "pastaki_choco_straw_pistachio",
+    id: "pastaki_choco_straw_pistachio_cup",
     categoryId: "pastakia",
     price: 1.50,
     isSoldOut: false,
@@ -109,10 +109,25 @@ export const pastakia: MenuItem[] = [
       ro: { name: "Choco-Strawberry-Pistachio Cup", description: "Cioco-Căpșuni-Fistic la pahar: Praline la pahar cu ciocolată, căpșuni și fistic" }
     }
   },
+  {
+    id: "pastaki_profiterole_cup",
+    categoryId: "pastakia",
+    price: 1.50,
+    translations: {
+      el: { name: "Ποτηράκι Προφιτερόλ", description: "Ατομικό προφιτερόλ με σουδάκια, κρέμα και σως σοκολάτας" },
+      en: { name: "Mini Profiterole Cup", description: "Individual cup with choux pastries, cream, and chocolate sauce" },
+      de: { name: "Mini Profiterole Cup", description: "Mini-Profiterole-Becher. Einzelportion mit Brandteigkrapfen, Creme und Schokoladensoße" },
+      fr: { name: "Mini Profiterole Cup", description: "Mini Coupe Profiterole. Coupe individuelle avec choux, crème et sauce au chocolat" },
+      es: { name: "Mini Profiterole Cup", description: "Copa Mini Profiterol. Copa individual con petisús, crema y salsa de chocolate" },
+      sr: { name: "Mini Profiterole Cup", description: "Mini profiterole u čaši. Individualna čaša sa kuvanim testom, kremom i čokoladnim prelivom" },
+      bg: { name: "Mini Profiterole Cup", description: "Мини профитерол в чаша. Индивидуална чаша с еклери, крем и шоколадов сос" },
+      ro: { name: "Mini Profiterole Cup", description: "Pahar Mini Profiterol. Porție individuală cu choux, cremă și sos de ciocolată" }
+    }
+  },
 
   // --- ΠΟΤΗΡΑΚΙΑ (ΜΕ ΒΑΣΗ ΜΠΙΣΚΟΤΟΥ - ΟΧΙ GLUTEN FREE) ---
   {
-    id: "pastaki_lotus",
+    id: "pastaki_lotus_cup",
     categoryId: "pastakia",
     price: 1.50,
     isSoldOut: false,
@@ -128,7 +143,7 @@ export const pastakia: MenuItem[] = [
     }
   },
   {
-    id: "pastaki_biscuit",
+    id: "pastaki_biscuit_cup",
     categoryId: "pastakia",
     price: 1.50,
     isSoldOut: false,
@@ -144,7 +159,7 @@ export const pastakia: MenuItem[] = [
     }
   },
   {
-    id: "pastaki_cheesecake",
+    id: "pastaki_cheesecake_cup",
     categoryId: "pastakia",
     price: 1.50,
     isSoldOut: false,
@@ -161,7 +176,7 @@ export const pastakia: MenuItem[] = [
     }
   },
   {
-    id: "pastaki_lemon_pie",
+    id: "pastaki_lemon_pie_cup",
     categoryId: "pastakia",
     price: 1.50,
     isSoldOut: false,
@@ -377,6 +392,68 @@ export const pastakia: MenuItem[] = [
       sr: { name: "Cake Pop", description: "Kejk pop: Mali okrugli kolač na štapiću, umočen u čokoladu i šarene mrvice" },
       bg: { name: "Cake Pop", description: "Кейк поп: Малък кръгъл кейк на клечка, потопен в цветен шоколад и пръчици" },
       ro: { name: "Cake Pop", description: "Cake pop: Prăjitură mică rotundă pe bețișor, înmuiată în ciocolată și decorată cu fulgi" }
+    }
+  },
+  {
+    id: "pastaki_choco_tart",
+    categoryId: "pastakia",
+    price: 1.30,
+    hasNuts: true,
+    translations: {
+      el: { name: "Ταρτάκι Σοκολάτας", description: "Τραγανή βάση τάρτας με πλούσια γέμιση σοκολάτας" },
+      en: { name: "Mini Chocolate Tart", description: "Crispy tart shell with rich chocolate filling" },
+      de: { name: "Mini Chocolate Tart", description: "Mini-Schokoladentörtchen. Knusprige Tartelette mit reichhaltiger Schokoladenfüllung" },
+      fr: { name: "Mini Chocolate Tart", description: "Mini Tartelette au Chocolat. Tartelette croustillante avec une riche garniture au chocolat" },
+      es: { name: "Mini Chocolate Tart", description: "Mini Tartaleta de Chocolate. Tartaleta crujiente con rico relleno de chocolate" },
+      sr: { name: "Mini Chocolate Tart", description: "Mini čokoladni tart. Hrskavi tart sa bogatim čokoladnim punjenjem" },
+      bg: { name: "Mini Chocolate Tart", description: "Мини шоколадова тарталета. Хрупкава тарталета с богат шоколадов пълнеж" },
+      ro: { name: "Mini Chocolate Tart", description: "Mini Tartă cu Ciocolată. Tartă crocantă cu umplutură bogată de ciocolată" }
+    }
+  },
+  {
+    id: "pastaki_lemon_pie",
+    categoryId: "pastakia",
+    price: 1.30,
+    translations: {
+      el: { name: "Παστάκι Lemon Pie", description: "Δροσιστική κρέμα λεμονιού με αφράτη μαρέγκα" },
+      en: { name: "Mini Lemon Pie", description: "Refreshing lemon cream with fluffy meringue" },
+      de: { name: "Mini Lemon Pie", description: "Mini-Zitronenkuchen. Erfrischende Zitronencreme mit luftigem Baiser" },
+      fr: { name: "Mini Lemon Pie", description: "Mini Tarte au Citron. Crème au citron rafraîchissante avec meringue moelleuse" },
+      es: { name: "Mini Lemon Pie", description: "Mini Tarta de Limón. Crema de limón refrescante con merengue esponjoso" },
+      sr: { name: "Mini Lemon Pie", description: "Mini pita od limuna. Osvežavajuća krema od limuna sa vazdušastim puslicama" },
+      bg: { name: "Mini Lemon Pie", description: "Мини лимонов пай. Освежаващ лимонов крем с пухкав меренг" },
+      ro: { name: "Mini Lemon Pie", description: "Mini Tarta cu Lămâie. Cremă răcoritoare de lămâie cu bezea pufoasă" }
+    }
+  },
+  {
+    id: "pastaki_biscuit",
+    categoryId: "pastakia",
+    price: 1.30,
+    translations: {
+      el: { name: "Παστάκι Μπισκότο", description: "Απολαυστικό παστάκι με γεύση μπισκότο και απαλή κρέμα" },
+      en: { name: "Mini Cookie Pastry", description: "Delicious mini pastry with cookies and cream flavor" },
+      de: { name: "Mini Cookie Pastry", description: "Mini-Keks-Gebäck. Köstliches Mini-Gebäck mit Keks- und Cremegeschmack" },
+      fr: { name: "Mini Cookie Pastry", description: "Mini Pâtisserie au Biscuit. Délicieuse mini pâtisserie saveur biscuits et crème" },
+      es: { name: "Mini Cookie Pastry", description: "Mini Pastel de Galleta. Delicioso mini pastel con sabor a galletas y crema" },
+      sr: { name: "Mini Cookie Pastry", description: "Mini kolač od keksa. Ukusan mini kolač sa ukusom keksa i krema" },
+      bg: { name: "Mini Cookie Pastry", description: "Мини бисквитена παστα. Вкусна mini паста с вкус на бисквити и сметана" },
+      ro: { name: "Mini Cookie Pastry", description: "Mini Prăjitură cu Biscuit. Delicioasă mini prăjitură cu aromă de biscuiți și cremă" }
+    }
+  },
+  {
+    id: "pastaki_ferrero",
+    categoryId: "pastakia",
+    price: 1.30,
+    hasNuts: true,
+    translations: {
+      el: { name: "Παστάκι Ferrero", description: "Πλούσιο παστάκι με γεύση σοκολάτας και φουντουκιού" },
+      en: { name: "Mini Ferrero Pastry", description: "Rich mini pastry with chocolate and hazelnut flavor" },
+      de: { name: "Mini Ferrero Pastry", description: "Mini-Ferrero-Gebäck. Reichhaltiges Mini-Gebäck mit Schokoladen- und Haselnussgeschmack" },
+      fr: { name: "Mini Ferrero Pastry", description: "Mini Pâtisserie Ferrero. Riche mini pâtisserie au goût de chocolat et de noisette" },
+      es: { name: "Mini Ferrero Pastry", description: "Mini Pastel Ferrero. Rico mini pastel con sabor a chocolate y avellana" },
+      sr: { name: "Mini Ferrero Pastry", description: "Mini Ferrero kolač. Bogat mini kolač sa ukusom čokolade i lešnika" },
+      bg: { name: "Mini Ferrero Pastry", description: "Мини паστα Φереро. Богата мини паστα с вкус на шоколад και лешник" },
+      ro: { name: "Mini Ferrero Pastry", description: "Mini Prăjitură Ferrero. Bogată mini prăjitură cu aromă de ciocolată și alune" }
     }
   }
 ];

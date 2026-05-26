@@ -19,6 +19,15 @@ export const breadsticks: MenuItem[] = [
       ro: { name: "ℹ️ Informații utile", description: "Se aplică o taxă de servire fixă suplimentară de +0.50€ pe comandă." }
     }
   },
+  {
+    id: "separator_brdstcks_info",
+    categoryId: "breadsticks",
+    price: 0,
+    hidePrice: true,
+    isSeparator: true,
+    isSoldOut: false,
+    translations: { el: { name: "", description: "" }, en: { name: "", description: "" }, de: { name: "", description: "" }, fr: { name: "", description: "" }, es: { name: "", description: "" }, sr: { name: "", description: "" }, bg: { name: "", description: "" }, ro: { name: "", description: "" } }
+  },
   // --- ΠΡΟΪΟΝΤΑ ---
   {
     id: "breadstick_sesame",

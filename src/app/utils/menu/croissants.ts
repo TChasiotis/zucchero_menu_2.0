@@ -66,6 +66,15 @@ export const croissants: MenuItem[] = [
     }
   },
   {
+    id: "separator_crssnt_extras",
+    categoryId: "croissants",
+    price: 0,
+    hidePrice: true,
+    isSeparator: true,
+    isSoldOut: false,
+    translations: { el: { name: "", description: "" }, en: { name: "", description: "" }, de: { name: "", description: "" }, fr: { name: "", description: "" }, es: { name: "", description: "" }, sr: { name: "", description: "" }, bg: { name: "", description: "" }, ro: { name: "", description: "" } }
+  },
+  {
     id: "croissant_extras",
     categoryId: "croissants",
     price: 0,

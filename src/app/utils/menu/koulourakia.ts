@@ -19,6 +19,15 @@ export const cookies: MenuItem[] = [
     }
   },
   {
+    id: "separator_cks_info",
+    categoryId: "cookies",
+    price: 0,
+    hidePrice: true,
+    isSeparator: true,
+    isSoldOut: false,
+    translations: { el: { name: "", description: "" }, en: { name: "", description: "" }, de: { name: "", description: "" }, fr: { name: "", description: "" }, es: { name: "", description: "" }, sr: { name: "", description: "" }, bg: { name: "", description: "" }, ro: { name: "", description: "" } }
+  },
+  {
     id: "cookie_classic",
     categoryId: "cookies",
     price: 10.00,
@@ -67,6 +76,22 @@ export const cookies: MenuItem[] = [
       sr: { name: "Petit-Four with Chocolate", description: "Pti-Fur sa Čokoladom: Mekani pti-fur keksići sa bogatim čokoladnim punjenjem i delimičnim prelivom od čokoladnih mrvica" },
       bg: { name: "Petit-Four with Chocolate", description: "Пти-Фур с Шоколад: Меки бисквитки пти-фур с богат шоколадов пълнеж и частична глазура от шоколадови пръчици" },
       ro: { name: "Petit-Four cu Ciocolată", description: "Petit-Four cu Ciocolată: Biscuiți moi petit-four cu umplutură bogată de ciocolată și decorați parțial cu ornamente de ciocolată" }
+    }
+  },
+  {
+    id: "cookie_yogurt",
+    categoryId: "cookies",
+    price: 10.00,
+    unit: "kg", // Δηλώνει ότι η τιμή πάει με το κιλό
+    translations: {
+      el: { name: "Κουλουράκια Γιαουρτιού", description: "Μεγάλα, μαλακά και αφράτα παραδοσιακά κουλουράκια, ιδανικά για τον καφέ σας" },
+      en: { name: "Yogurt Cookies", description: "Large, soft and fluffy traditional cookies, perfect with your coffee" },
+      de: { name: "Yogurt Cookies", description: "Joghurt-Kekse. Große, weiche und fluffige traditionelle Kekse, perfekt zum Kaffee" },
+      fr: { name: "Yogurt Cookies", description: "Biscuits au Yaourt. Grands biscuits traditionnels moelleux et aérés, parfaits avec le café" },
+      es: { name: "Yogurt Cookies", description: "Galletas de Yogur. Galletas tradicionales grandes, suaves y esponjosas, perfectas con el café" },
+      sr: { name: "Yogurt Cookies", description: "Keksići od jogurta. Veliki, mekani i vazdušasti tradicionalni keksići, savršeni uz kafu" },
+      bg: { name: "Yogurt Cookies", description: "Курабийки с кисело мляко. Големи, меки и пухкави традиционни курабийки, идеални за кафе" },
+      ro: { name: "Yogurt Cookies", description: "Biscuiți cu Iaurt. Biscuiți tradiționali mari, moi și pufoși, perfecți pentru cafea" }
     }
   }
 ];

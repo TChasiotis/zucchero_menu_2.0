@@ -17,6 +17,15 @@ export const miniPies: MenuItem[] = [
       ro: { name: "ℹ️ Informații utile", description: "Se aplică o taxă de servire fixă suplimentară de +0.50€ pe comandă pentru mini plăcinte." }
     }
   },
+  {
+    id: "separator_mnpies_info",
+    categoryId: "mini_pies",
+    price: 0,
+    hidePrice: true,
+    isSeparator: true,
+    isSoldOut: false,
+    translations: { el: { name: "", description: "" }, en: { name: "", description: "" }, de: { name: "", description: "" }, fr: { name: "", description: "" }, es: { name: "", description: "" }, sr: { name: "", description: "" }, bg: { name: "", description: "" }, ro: { name: "", description: "" } }
+  },
   // --- ΠΡΟΪΟΝΤΑ ---
   {
     id: "mini_pie_kourou_cheese",

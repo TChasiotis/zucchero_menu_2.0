@@ -289,15 +289,17 @@ export default function MenuClient({
         <div
           className={`flex overflow-x-auto hide-scrollbar p-3 gap-2 max-w-3xl mx-auto w-full transition-opacity duration-300 ${searchQuery ? "opacity-40 pointer-events-none" : "opacity-100"}`}
         >
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => setActiveCategory(cat.id)}
-              className={`whitespace-nowrap px-5 py-2 rounded-full text-sm font-bold transition-all ${activeCategory === cat.id ? "bg-slate-800 text-white shadow-md scale-105" : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-50"}`}
-            >
-              {cat.translations[lang]}
-            </button>
-          ))}
+          {categories
+            .filter((category) => !category.isNotAvailable) // <--- ΑΥΤΟ ΕΙΝΑΙ ΤΟ ΜΑΓΙΚΟ ΦΙΛΤΡΟ
+            .map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setActiveCategory(cat.id)}
+                className={`whitespace-nowrap px-5 py-2 rounded-full text-sm font-bold transition-all ${activeCategory === cat.id ? "bg-slate-800 text-white shadow-md scale-105" : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-50"}`}
+              >
+                {cat.translations[lang]}
+              </button>
+            ))}
         </div>
       </div>
 
@@ -311,21 +313,75 @@ export default function MenuClient({
             exit={{ opacity: 0, y: -20 }}
             className="flex flex-col gap-4"
           >
-            {activeItems.filter((item) => !item.isSoldOut).length > 0 ? (
+            {activeItems.filter((item) => {
+              // Κλασικός έλεγχος: αν είναι sold out, το κρύβουμε
+              if (item.isSoldOut) return false;
+
+              // ΕΞΥΠΝΟΣ ΕΛΕΓΧΟΣ: Αν το παγωτό είναι εκτός εποχής, κρύψε και τα έξτρα του
+              const isIceCreamHidden =
+                categories.find((c) => c.id === "ice_cream")?.isNotAvailable ===
+                true;
+              if (
+                isIceCreamHidden &&
+                (item.id === "coffee_extra_ice_cream" ||
+                  item.id === "siropiasta_extra_ice_cream")
+              ) {
+                return false;
+              }
+
+              return true;
+            }).length > 0 ? (
               activeItems
-                .filter((item) => !item.isSoldOut)
-                .map((item) =>
-                  item.isSeparator ? (
-                    /* ----- ΝΕΟ MINIMAL ΔΙΑΧΩΡΙΣΤΙΚΟ: SUPER ΛΕΠΤΗ ΓΡΑΜΜΗ 0.5px ΚΑΙ CUSTOM ΧΡΩΜΑ ----- */
-                    /* ----- SUPER ΛΕΠΤΗ ΓΡΑΜΜΗ ΜΕ CSS SCALE HACK ----- */
+                .filter((item) => {
+                  if (item.isSoldOut) return false;
+
+                  const isIceCreamHidden =
+                    categories.find((c) => c.id === "ice_cream")
+                      ?.isNotAvailable === true;
+                  if (
+                    isIceCreamHidden &&
+                    (item.id === "coffee_extra_ice_cream" ||
+                      item.id === "siropiasta_extra_ice_cream")
+                  )
+                    return false;
+
+                  return true;
+                })
+                .map((item, index, arr) => {
+                  const isSeparator =
+                    item.isSeparator || item.id.includes("separator");
+
+                  /* ----- ΕΞΥΠΝΟΣ ΕΛΕΓΧΟΣ ΓΙΑ "ΟΡΦΑΝΑ" ΔΙΑΧΩΡΙΣΤΙΚΑ ----- */
+                  if (isSeparator) {
+                    // 1. Αν το separator είναι το ΤΕΛΕΥΤΑΙΟ (δεν έχει μείνει τίποτα από κάτω), κρύβεται.
+                    if (index === arr.length - 1) return null;
+
+                    // 2. Αν το separator είναι το ΠΡΟΤΕΛΕΥΤΑΙΟ (μένει μόνο ΕΝΑ item από κάτω)
+                    if (index === arr.length - 2) {
+                      const nextItem = arr[index + 1];
+
+                      // Ελέγχουμε αν το 1 item που έμεινε είναι Πληροφορίες (info), Έξτρα (extra) ή Παγωτό (ice_cream)
+                      const isNextItemInfo =
+                        nextItem.id.includes("info") ||
+                        nextItem.id.includes("ice_cream") ||
+                        nextItem.id.includes("extra") ||
+                        (nextItem.hidePrice && nextItem.price === 0);
+
+                      // Αν ΔΕΝ είναι Πληροφορίες ή Έξτρα, κρύβουμε το separator
+                      if (!isNextItemInfo) {
+                        return null;
+                      }
+                    }
+                  }
+
+                  return isSeparator ? (
+                    /* ----- ΝΕΟ MINIMAL ΔΙΑΧΩΡΙΣΤΙΚΟ ----- */
                     <div
                       key={item.id}
-                      className="w-full my-6 opacity-80"
+                      className="w-2/3 mx-auto my-5 rounded-full shadow-inner" // Αλλάξαμε το my-10 σε my-5
                       style={{
-                        height: "1px",
+                        height: "5px",
                         backgroundColor: "rgb(151, 220, 245)",
-                        transform:
-                          "scaleY(0.4)" /* <--- ΤΟ ΜΥΣΤΙΚΟ ΓΙΑ ΝΑ ΓΙΝΕΙ ΜΙΣΟ PIXEL! */,
                       }}
                     />
                   ) : (
@@ -398,15 +454,15 @@ export default function MenuClient({
                             </span>
                           )}
                           {item.hasCherry && (
-                            <span className="flex items-center gap-1 text-[10px] font-bold bg-rose-100 text-rose-700 px-2 py-1 rounded-md shadow-sm">
-                              🍒 {ui.cherry}
+                            <span className="flex items-center gap-1 text-[10px] font-bold bg-purple-100 text-lila-700 px-2 py-1 rounded-md shadow-sm">
+                              🫐 {ui.cherry}
                             </span>
                           )}
                         </div>
                       )}
                     </div>
-                  ),
-                )
+                  );
+                })
             ) : (
               <div className="text-center bg-white/80 rounded-2xl p-8 border border-white/50 shadow-sm mt-4">
                 <Search size={40} className="mx-auto text-slate-300 mb-3" />

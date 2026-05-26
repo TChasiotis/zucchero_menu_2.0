@@ -18,6 +18,15 @@ export const pies: MenuItem[] = [
     }
   },
   {
+    id: "separator_pies_info",
+    categoryId: "pies",
+    price: 0,
+    hidePrice: true,
+    isSeparator: true,
+    isSoldOut: false,
+    translations: { el: { name: "", description: "" }, en: { name: "", description: "" }, de: { name: "", description: "" }, fr: { name: "", description: "" }, es: { name: "", description: "" }, sr: { name: "", description: "" }, bg: { name: "", description: "" }, ro: { name: "", description: "" } }
+  },
+  {
     id: "pie_cheese",
     categoryId: "pies",
     price: 0.70,

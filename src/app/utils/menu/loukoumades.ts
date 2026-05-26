@@ -76,6 +76,15 @@ export const loukoumades: MenuItem[] = [
       }
     }
   },
+  {
+    id: "separator_louk_info",
+    categoryId: "loukoumades",
+    price: 0,
+    hidePrice: true,
+    isSeparator: true,
+    isSoldOut: false,
+    translations: { el: { name: "", description: "" }, en: { name: "", description: "" }, de: { name: "", description: "" }, fr: { name: "", description: "" }, es: { name: "", description: "" }, sr: { name: "", description: "" }, bg: { name: "", description: "" }, ro: { name: "", description: "" } }
+  },
   // --- ΚΑΡΤΑ ΠΛΗΡΟΦΟΡΙΩΝ ---
   {
     id: "loukoumades_info_general",

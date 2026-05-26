@@ -7,6 +7,18 @@ async function main() {
   console.log("🌱 Ξεκινάει το φύτεμα των δεδομένων (Seeding) στην Ιρλανδία...");
 
   try {
+
+        // --- ΡΑΝΤΑΡ ΔΙΠΛΟΤΥΠΩΝ IDs ---
+    const allIds = menuItemsData.map(item => item.id);
+    const duplicateIds = allIds.filter((id, index) => allIds.indexOf(id) !== index);
+
+    if (duplicateIds.length > 0) {
+      console.log("🚨 ΒΡΗΚΑ ΔΙΠΛΑ IDs ΣΤΑ ΑΡΧΕΙΑ ΣΟΥ:", duplicateIds);
+      process.exit(1); // Σταματάει το script για να μην πετάξει το τεράστιο error της Turso
+    } else {
+      console.log("✅ Όλα τα IDs είναι μοναδικά! Στέλνω στην Turso...");
+    }
+
     // 1. Καθαρίζουμε τους πίνακες (ώστε αν το τρέξεις 2 φορές να μην μπουν διπλά)
     console.log("🧹 Καθαρισμός παλιών δεδομένων...");
     await db.delete(menuItemsSchema);
