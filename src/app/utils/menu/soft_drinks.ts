@@ -21,7 +21,6 @@ export const softDrinks: MenuItem[] = [
     id: "soft_orangeade",
     categoryId: "soft_drinks",
     price: 2.50,
-    hasCitrus: true,
     isSoldOut: false,
     translations: {
       el: { name: "Πορτοκαλάδα", description: "Δροσερή πορτοκαλάδα με πλούσιο άρωμα και φυσαλίδες" },
@@ -38,7 +37,6 @@ export const softDrinks: MenuItem[] = [
     id: "soft_orangeade_non_carbonated",
     categoryId: "soft_drinks",
     price: 2.50,
-    hasCitrus: true,
     isSoldOut: false,
     translations: {
       el: { name: "Πορτοκαλάδα (χωρίς ανθρακικό)", description: "Δροσερή πορτοκαλάδα με πλούσιο άρωμα, χωρίς ανθρακικό" },
@@ -55,7 +53,6 @@ export const softDrinks: MenuItem[] = [
     id: "soft_lemonade",
     categoryId: "soft_drinks",
     price: 2.50,
-    hasCitrus: true,
     isSoldOut: false,
     translations: {
       el: { name: "Λεμονάδα", description: "Κλασική, δροσιστική λεμονάδα με τέλεια ισορροπία γλυκού και ξινού" },
@@ -88,7 +85,6 @@ export const softDrinks: MenuItem[] = [
     id: "soft_sparkling_lemon_lime",
     categoryId: "soft_drinks",
     price: 2.50,
-    hasCitrus: true,
     isSoldOut: false,
     translations: {
       el: { name: "Σόδα με Λεμόνι & Λάιμ", description: "Δροσερή σόδα με μια αναζωογονητική πινελιά από εσπεριδοειδή" },
@@ -137,7 +133,6 @@ export const softDrinks: MenuItem[] = [
     id: "soft_lemon_ice_tea",
     categoryId: "soft_drinks",
     price: 2.50,
-    hasCitrus: true,
     isSoldOut: false,
     translations: {
       el: { name: "Ice Tea Λεμόνι", description: "Αναζωογονητικό παγωμένο τσάι με έντονη γεύση λεμονιού" },
@@ -170,7 +165,6 @@ export const softDrinks: MenuItem[] = [
     id: "soft_grapefruit_soda",
     categoryId: "soft_drinks",
     price: 2.50,
-    hasCitrus: true,
     isSoldOut: false,
     translations: {
       el: { name: "Σόδα Γκρέιπφρουτ", description: "Έντονη, δροσιστική γεύση γκρέιπφρουτ με μια ευχάριστη πικράδα" },
@@ -187,7 +181,6 @@ export const softDrinks: MenuItem[] = [
     id: "soft_lime_ginger_soda",
     categoryId: "soft_drinks",
     price: 2.50,
-    hasCitrus: true,
     isSoldOut: false,
     translations: {
       el: { name: "Σόδα Λάιμ & Τζίντζερ", description: "Εκρηκτικός συνδυασμός από δροσερό λάιμ και τζίντζερ" },
@@ -204,7 +197,6 @@ export const softDrinks: MenuItem[] = [
     id: "soft_pomegranate_cranberry_soda",
     categoryId: "soft_drinks",
     price: 2.50,
-    hasCherry: true,
     isSoldOut: false,
     translations: {
       el: { name: "Σόδα Ρόδι & Κράνμπερι", description: "Φρουτώδης σόδα με ελαφρώς όξινη, αναζωογονητική γεύση" },

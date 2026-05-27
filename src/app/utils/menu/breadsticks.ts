@@ -70,6 +70,7 @@ export const breadsticks: MenuItem[] = [
     categoryId: "breadsticks",
     price: 12.00,
     unit: "kg",
+    hasDairy: true,
     isSoldOut: false,
     translations: {
       el: { name: "Κριτσίνια με Κασέρι", description: "Αφράτα κριτσίνια ζυμωμένα με τυρί και επικάλυψη από ψημένο, λαχταριστό κασέρι" },
@@ -141,6 +142,7 @@ export const breadsticks: MenuItem[] = [
     categoryId: "breadsticks",
     price: 12.00,
     unit: "kg",
+    hasDairy: true,
     isSoldOut: false,
     translations: {
       el: { name: "Κριτσίνια με Κεφαλοτύρι", description: "Τραγανά κριτσίνια με την πλούσια, αλμυρή γεύση από αυθεντικό κεφαλοτύρι" },

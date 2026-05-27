@@ -60,7 +60,6 @@ export const pastakia: MenuItem[] = [
     price: 1.50,
     isSoldOut: false,
     isGlutenFree: true,
-    hasStrawberry: true,
     translations: {
       el: { name: "Ποτηράκι Φράουλα - Σοκολάτα", description: "Συνδυασμός πραλίνας φράουλας και σοκολάτας σε ποτηράκι" },
       en: { name: "Strawberry-Chocolate Cup", description: "Strawberry and chocolate praline combined in a cup" },
@@ -77,7 +76,6 @@ export const pastakia: MenuItem[] = [
     categoryId: "pastakia",
     price: 1.50,
     isGlutenFree: true,
-    hasStrawberry: true,
     isSoldOut: false,
     translations: {
       el: { name: "Ποτηράκι Κρέμα - Φράουλα", description: "Γλυκό σε ποτηράκι με συνδυασμό λευκής κρέμας και πραλίνας φράουλας" },
@@ -96,7 +94,6 @@ export const pastakia: MenuItem[] = [
     price: 1.50,
     isSoldOut: false,
     isGlutenFree: true,
-    hasStrawberry: true,
     hasNuts: true,
     translations: {
       el: { name: "Ποτηράκι Σοκολάτα - Φράουλα - Φυστίκι", description: "Πραλίνες σε ποτηράκι με συνδυασμό σοκολάτας, φράουλας και φυστικιού" },
@@ -163,7 +160,6 @@ export const pastakia: MenuItem[] = [
     categoryId: "pastakia",
     price: 1.50,
     isSoldOut: false,
-    hasCherry: true,
     translations: {
       el: { name: "Ποτηράκι Cheesecake", description: "Cheesecake σε ποτηράκι με απαλή κρέμα, βύσσινο και βάση μπισκότου" },
       en: { name: "Cheesecake Cup", description: "Cheesecake in a cup with soft cream, sour cherry and biscuit base" },
@@ -180,7 +176,6 @@ export const pastakia: MenuItem[] = [
     categoryId: "pastakia",
     price: 1.50,
     isSoldOut: false,
-    hasCitrus: true,
     translations: {
       el: { name: "Ποτηράκι Lemon Pie", description: "Lemon Pie σε ποτηράκι με λεμονάτη γέμιση, κρέμα και βάση μπισκότου" },
       en: { name: "Lemon Pie Cup", description: "Lemon pie in a cup with tangy filling, cream and biscuit base" },
@@ -197,7 +192,6 @@ export const pastakia: MenuItem[] = [
     categoryId: "pastakia",
     price: 1.30,
     isSoldOut: false,
-    hasCitrus: true,
     translations: {
       el: { name: "Ταρτάκι Lemon Pie", description: "Μικρή τάρτα με λεμονόκρεμα" },
       en: { name: "Mini Lemon Tart", description: "Small tart with tangy lemon cream" },

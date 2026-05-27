@@ -6,6 +6,8 @@ export const cold_bev: MenuItem[] = [
     id: "cold_bev_chocolate",
     categoryId: "cold_bev",
     price: 4.00,
+    hasDairy: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Κρύα Σοκολάτα", description: "Φτιάχνεται με γάλα. Υπάρχει σε ποικιλία γεύσεων (ρωτήστε μας). Η σκόνη περιέχει ζάχαρη." },
       en: { name: "Ice Chocolate", description: "Made with milk. Comes in a variety of flavors (ask us). Chocolate powder contains sugar." },
@@ -22,6 +24,7 @@ export const cold_bev: MenuItem[] = [
     categoryId: "cold_bev",
     price: 3.00,
     isVegan: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Κρύο Κακάο", description: "Φτιάχνεται με νερό. Η σκόνη δεν έχει ζάχαρη, προσθέστε το γλυκαντικό της επιλογής σας." },
       en: { name: "Ice Cocoa", description: "Made with water. Cocoa powder has no sugar, add a sweetener of your choice." },
@@ -56,6 +59,9 @@ export const cold_bev: MenuItem[] = [
     id: "cold_bev_milkshake",
     categoryId: "cold_bev",
     price: 4.00,
+    hasDairy: true,
+    hasEgg: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Milkshake", description: "Φτιάχνεται με γάλα και παγωτό. Διαλέξτε την γεύση που θέλετε από το ψυγείο του παγωτού." },
       en: { name: "Milkshake", description: "Made with milk and ice cream. Pick the flavor you want from the ice cream fridge." },
@@ -91,6 +97,7 @@ export const cold_bev: MenuItem[] = [
     categoryId: "cold_bev",
     price: 4.00,
     isVegan: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Γρανίτα", description: "Φτιάχνεται με νερό και σορμπέ παγωτό φρούτου. Διαλέξτε την γεύση που θέλετε από το ψυγείο του παγωτού." },
       en: { name: "Ice Slush", description: "Made with water and sorbet fruit ice cream. Pick the flavor you want from the ice cream fridge." },
@@ -121,28 +128,12 @@ export const cold_bev: MenuItem[] = [
       ro: { name: "Dairy Products", description: "" }
     }
   },
-  // --- SEPARATOR: ΓΑΛΑΚΤΟΚΟΜΙΚΑ ---
-  {
-    id: "separator_dairy",
-    categoryId: "cold_bev",
-    price: 0,
-    hidePrice: true,
-    isSeparator: true,
-    translations: {
-      el: { name: "Γαλακτοκομικά", description: "" },
-      en: { name: "Dairy Products", description: "" },
-      de: { name: "Dairy Products", description: "" },
-      fr: { name: "Dairy Products", description: "" },
-      es: { name: "Dairy Products", description: "" },
-      sr: { name: "Dairy Products", description: "" },
-      bg: { name: "Dairy Products", description: "" },
-      ro: { name: "Dairy Products", description: "" }
-    }
-  },
   {
     id: "cold_bev_chocomilk_330",
     categoryId: "cold_bev",
     price: 2.00,
+    hasDairy: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Σοκολατούχο Γάλα 330ml", description: "Απολαυστικό, δροσερό σοκολατούχο γάλα υψηλής ποιότητας" },
       en: { name: "Chocolate Milk 330ml", description: "Delicious, refreshing premium chocolate milk" },
@@ -158,6 +149,8 @@ export const cold_bev: MenuItem[] = [
     id: "cold_bev_chocomilk_500",
     categoryId: "cold_bev",
     price: 2.20,
+    hasDairy: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Σοκολατούχο Γάλα 500ml", description: "Απολαυστικό, δροσερό σοκολατούχο γάλα σε μεγάλη συσκευασία" },
       en: { name: "Chocolate Milk 500ml", description: "Delicious, refreshing chocolate milk in a large bottle" },
@@ -173,6 +166,8 @@ export const cold_bev: MenuItem[] = [
     id: "cold_bev_chocomilk_light_330",
     categoryId: "cold_bev",
     price: 2.00,
+    hasDairy: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Σοκολατούχο Γάλα Ελαφρύ 330ml", description: "Η κλασική γεύση της σοκολάτας, με χαμηλά λιπαρά" },
       en: { name: "Chocolate Milk Light 330ml", description: "The classic chocolate taste, with low fat" },
@@ -188,6 +183,8 @@ export const cold_bev: MenuItem[] = [
     id: "cold_bev_chocomilk_light_500",
     categoryId: "cold_bev",
     price: 2.20,
+    hasDairy: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Σοκολατούχο Γάλα Ελαφρύ 500ml", description: "Η κλασική γεύση της σοκολάτας σε μεγάλη συσκευασία, με χαμηλά λιπαρά" },
       en: { name: "Chocolate Milk Light 500ml", description: "The classic chocolate taste in a large bottle, with low fat" },
@@ -203,77 +200,84 @@ export const cold_bev: MenuItem[] = [
     id: "cold_bev_kefir",
     categoryId: "cold_bev",
     price: 2.50,
+    hasDairy: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Κεφίρ", description: "Δροσιστικό ρόφημα κεφίρ, πλούσιο σε ωφέλιμα προβιοτικά" },
       en: { name: "Kefir", description: "Refreshing kefir drink, rich in beneficial probiotics" },
-      de: { name: "Kefir", description: "Kefir" },
-      fr: { name: "Kefir", description: "Kéfir" },
-      es: { name: "Kefir", description: "Kéfir" },
-      sr: { name: "Kefir", description: "Kefir" },
-      bg: { name: "Kefir", description: "Кефир" },
-      ro: { name: "Kefir", description: "Chefir" }
+      de: { name: "Kefir", description: "Kefir: Erfrischendes Kefirgetränk, reich an nützlichen Probiotika" },
+      fr: { name: "Kefir", description: "Kéfir: Boisson rafraîchissante au kéfir, riche en probiotiques bénéfiques" },
+      es: { name: "Kefir", description: "Kéfir: Bebida refrescante de kéfir, rica en probióticos beneficiosos" },
+      sr: { name: "Kefir", description: "Kefir: Osvežavajući napitak od kefira, bogat korisnim probioticima" },
+      bg: { name: "Kefir", description: "Кефир: Освежаваща кефирна напитка, богата на полезни пробиотици" },
+      ro: { name: "Kefir", description: "Chefir: Băutură răcoritoare de chefir, bogată în probiotice benefice" }
     }
   },
   {
     id: "cold_bev_kefir_banana",
     categoryId: "cold_bev",
     price: 2.50,
+    hasDairy: true,
     translations: {
       el: { name: "Κεφίρ με Μπανάνα, Βρώμη & Μέλι", description: "Θρεπτικό ρόφημα κεφίρ με φρέσκια μπανάνα, νιφάδες βρώμης και φυσικό μέλι" },
       en: { name: "Kefir with Banana, Oat & Honey", description: "Nutritious kefir drink with fresh banana, oats, and natural honey" },
-      de: { name: "Kefir with Banana, Oat & Honey", description: "Kefir mit Banane, Hafer & Honig" },
-      fr: { name: "Kefir with Banana, Oat & Honey", description: "Kéfir à la banane, avoine et miel" },
-      es: { name: "Kefir with Banana, Oat & Honey", description: "Kéfir con plátano, avena y miel" },
-      sr: { name: "Kefir with Banana, Oat & Honey", description: "Kefir sa bananom, ovsom i medom" },
-      bg: { name: "Kefir with Banana, Oat & Honey", description: "Кефир с банан, овесени ядки и мед" },
-      ro: { name: "Kefir with Banana, Oat & Honey", description: "Chefir cu banane, ovăz și miere" }
+      de: { name: "Kefir with Banana, Oat & Honey", description: "Kefir mit Banane, Hafer & Honig: Nährstoffreiches Kefirgetränk mit frischer Banane, Haferflocken und natürlichem Honig" },
+      fr: { name: "Kefir with Banana, Oat & Honey", description: "Kéfir à la banane, avoine et miel: Boisson nutritive au kéfir avec banane fraîche, flocons d'avoine et miel naturel" },
+      es: { name: "Kefir with Banana, Oat & Honey", description: "Kéfir con plátano, avena y miel: Bebida nutritiva de kéfir con plátano fresco, copos de avena y miel natural" },
+      sr: { name: "Kefir with Banana, Oat & Honey", description: "Kefir sa bananom, ovsom i medom: Hranljivi napitak od kefira sa svežom bananom, ovsenim pahuljicama i prirodnim medom" },
+      bg: { name: "Kefir with Banana, Oat & Honey", description: "Кефир с банан, овесени ядки и мед: Хранителна кефирна напитка с пресен банан, овесени ядки и натурален мед" },
+      ro: { name: "Kefir with Banana, Oat & Honey", description: "Chefir cu banane, ovăz și miere: Băutură nutritivă de chefir cu banane proaspete, fulgi de ovăz și miere naturală" }
     }
   },
   {
     id: "cold_bev_kefir_strawberry_cherry",
     categoryId: "cold_bev",
     price: 2.50,
-    hasStrawberry: true,
-    hasCherry: true,
+    hasDairy: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Κεφίρ με Φράουλα, Βύσσινο & Σμέουρο", description: "Φρουτένιο ρόφημα κεφίρ με μοναδικό συνδυασμό από φράουλα, βύσσινο και σμέουρο" },
       en: { name: "Kefir with Strawberry, Dark Cherry & Raspberry", description: "Fruity kefir drink with a unique blend of strawberry, dark cherry, and raspberry" },
-      de: { name: "Kefir with Strawberry, Dark Cherry & Raspberry", description: "Kefir mit Erdbeere, Schwarzkirsche & Himbeere" },
-      fr: { name: "Kefir with Strawberry, Dark Cherry & Raspberry", description: "Kéfir à la fraise, griotte et framboise" },
-      es: { name: "Kefir with Strawberry, Dark Cherry & Raspberry", description: "Kéfir con fresa, cereza negra y frambuesa" },
-      sr: { name: "Kefir with Strawberry, Dark Cherry & Raspberry", description: "Kefir sa jagodom, crnom višnjom i malinom" },
-      bg: { name: "Kefir with Strawberry, Dark Cherry & Raspberry", description: "Кефир с ягода, черна череша и малина" },
-      ro: { name: "Kefir with Strawberry, Dark Cherry & Raspberry", description: "Chefir cu căpșuni, cireșe negre și zmeură" }
+      de: { name: "Kefir with Strawberry, Dark Cherry & Raspberry", description: "Kefir mit Erdbeere, Schwarzkirsche & Himbeere: Fruchtiges Kefirgetränk mit einer einzigartigen Mischung aus Erdbeere, Schwarzkirsche und Himbeere" },
+      fr: { name: "Kefir with Strawberry, Dark Cherry & Raspberry", description: "Kéfir à la fraise, griotte et framboise: Boisson fruitée au kéfir avec un mélange unique de fraise, griotte et framboise" },
+      es: { name: "Kefir with Strawberry, Dark Cherry & Raspberry", description: "Kéfir con fresa, cereza negra y frambuesa: Bebida de kéfir afrutada con una mezcla única de fresa, cereza negra y frambuesa" },
+      sr: { name: "Kefir with Strawberry, Dark Cherry & Raspberry", description: "Kefir sa jagodom, crnom višnjom i malinom: Voćni napitak od kefira sa jedinstvenom mešavinom jagode, crne višnje i maline" },
+      bg: { name: "Kefir with Strawberry, Dark Cherry & Raspberry", description: "Кефир с ягода, черна череша и малина: Плодова кефирна напитка с уникална комбинация от ягода, черна череша и малина" },
+      ro: { name: "Kefir with Strawberry, Dark Cherry & Raspberry", description: "Chefir cu căpșuni, cireșe negre și zmeură: Băutură de chefir fructată, cu un amestec unic de căpșuni, cireșe negre și zmeură" }
     }
   },
   {
     id: "cold_bev_kefir_mango",
     categoryId: "cold_bev",
     price: 2.50,
+    hasDairy: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Κεφίρ με Μάνγκο, Φρούτο του Πάθους & Τζίντζερ", description: "Εξωτικό ρόφημα κεφίρ με μάνγκο, φρούτο του πάθους και μια ελαφρώς πικάντικη νότα τζίντζερ" },
       en: { name: "Kefir with Mango, Passion Fruit & Ginger", description: "Exotic kefir drink with mango, passion fruit, and a mildly spicy hint of ginger" },
-      de: { name: "Kefir with Mango, Passion Fruit & Ginger", description: "Kefir mit Mango, Passionsfrucht & Ingwer" },
-      fr: { name: "Kefir with Mango, Passion Fruit & Ginger", description: "Kéfir à la mangue, fruit de la passion et gingembre" },
-      es: { name: "Kefir with Mango, Passion Fruit & Ginger", description: "Kéfir con mango, maracuyá y jengibre" },
-      sr: { name: "Kefir with Mango, Passion Fruit & Ginger", description: "Kefir sa mangom, marakujom i đumbirom" },
-      bg: { name: "Kefir with Mango, Passion Fruit & Ginger", description: "Кефир с манго, маракуя и джинджифил" },
-      ro: { name: "Kefir with Mango, Passion Fruit & Ginger", description: "Chefir cu mango, fructul pasiunii și ghimbir" }
+      de: { name: "Kefir with Mango, Passion Fruit & Ginger", description: "Kefir mit Mango, Passionsfrucht & Ingwer: Exotisches Kefirgetränk mit Mango, Passionsfrucht und einer leicht würzigen Ingwernote" },
+      fr: { name: "Kefir with Mango, Passion Fruit & Ginger", description: "Kéfir à la mangue, fruit de la passion et gingembre: Boisson exotique au kéfir avec mangue, fruit de la passion et une légère note épicée de gingembre" },
+      es: { name: "Kefir with Mango, Passion Fruit & Ginger", description: "Kéfir con mango, maracuyá y jengibre: Bebida exótica de kéfir con mango, maracuyá y un toque ligeramente picante de jengibre" },
+      sr: { name: "Kefir with Mango, Passion Fruit & Ginger", description: "Kefir sa mangom, marakujom i đumbirom: Egzotični napitak od kefira sa mangom, marakujom i blago začinjenom notom đumbira" },
+      bg: { name: "Kefir with Mango, Passion Fruit & Ginger", description: "Кефир с манго, маракуя и джинджифил: Екзотична кефирна напитка с манго, маракуя и леко пикантна нотка джинджифил" },
+      ro: { name: "Kefir with Mango, Passion Fruit & Ginger", description: "Chefir cu mango, fructul pasiunii și ghimbir: Băutură exotică de chefir cu mango, fructul pasiunii și o notă ușor picantă de ghimbir" }
     }
   },
   {
     id: "cold_bev_ayran",
     categoryId: "cold_bev",
     price: 2.50,
+    hasDairy: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Αριάνι", description: "Παραδοσιακό, ελαφρώς αλατισμένο και άκρως δροσιστικό ρόφημα γιαουρτιού" },
       en: { name: "Ayran", description: "Traditional, slightly salted and highly refreshing yogurt drink" },
-      de: { name: "Ayran", description: "Ayran" },
-      fr: { name: "Ayran", description: "Ayran" },
-      es: { name: "Ayran", description: "Ayran" },
-      sr: { name: "Ayran", description: "Ajran" },
-      bg: { name: "Ayran", description: "Айрян" },
-      ro: { name: "Ayran", description: "Ayran" }
+      de: { name: "Ayran", description: "Ayran: Traditionelles, leicht gesalzenes und sehr erfrischendes Joghurtgetränk" },
+      fr: { name: "Ayran", description: "Ayran: Boisson au yaourt traditionnelle, légèrement salée et très rafraîchissante" },
+      es: { name: "Ayran", description: "Ayran: Bebida de yogur tradicional, ligeramente salada y muy refrescante" },
+      sr: { name: "Ayran", description: "Ajran: Tradicionalni, blago posoljeni i veoma osvežavajući napitak od jogurta" },
+      bg: { name: "Ayran", description: "Айрян: Традиционна, леко солена и изключително освежаваща напитка от кисело мляко" },
+      ro: { name: "Ayran", description: "Ayran: Băutură tradițională din iaurt, ușor sărată și extrem de răcoritoare" }
     }
   }
 ];

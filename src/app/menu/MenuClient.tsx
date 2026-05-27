@@ -6,6 +6,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ChevronDown, Search, X } from "lucide-react";
 
+//npx tsx --env-file=.env.local src/db/seed.ts για να στειλω τα δεδομένα στο Turso
+
 // --- ΤΟ ΕΞΥΠΝΟ ΛΕΞΙΚΟ ΓΙΑ ΤΟ UI ---
 const uiTranslations = {
   el: {
@@ -14,11 +16,12 @@ const uiTranslations = {
     perKg: "/ κιλό",
     perPortion: "/ μερίδα",
     rights: "Όλα τα δικαιώματα διατηρούνται",
-    vegan: "Vegan / Νηστίσιμο",
-    nuts: "Ξηροί Καρποί",
-    glutenFree: "Χωρίς Γλουτένη",
-    citrus: "Εσπεριδοειδή",
-    strawberry: "Φράουλα",
+    vegan: "Vegan / Νηστισιμο",
+    nuts: "Ξηροι Καρποι",
+    glutenFree: "Χωρις Γλουτενη",
+    egg: "Αυγο",
+    dairy: "Γαλακτοκομικα",
+    soy: "Σογια",
   },
   en: {
     search: "Search for items...",
@@ -29,8 +32,9 @@ const uiTranslations = {
     vegan: "Vegan",
     nuts: "Nuts",
     glutenFree: "Gluten Free",
-    citrus: "Citrus Fruits",
-    strawberry: "Strawberry",
+    egg: "Egg",
+    dairy: "Dairy",
+    soy: "Soy",
   },
   de: {
     search: "Artikel suchen...",
@@ -41,20 +45,22 @@ const uiTranslations = {
     vegan: "Vegan",
     nuts: "Nüsse",
     glutenFree: "Glutenfrei",
-    citrus: "Zitrusfrüchte",
-    strawberry: "Erdbeere",
+    egg: "Ei",
+    dairy: "Milchprodukte",
+    soy: "Soja",
   },
   fr: {
     search: "Rechercher des articles...",
     noResults: "Aucun résultat pour",
     perKg: "/ kg",
-    perPortion: "/ Portion",
+    perPortion: "/ portion",
     rights: "Tous droits réservés",
     vegan: "Végan",
     nuts: "Fruits à coque",
     glutenFree: "Sans Gluten",
-    citrus: "Agrumes",
-    strawberry: "Fraise",
+    egg: "Œuf",
+    dairy: "Produits Laitiers",
+    soy: "Soja",
   },
   es: {
     search: "Buscar artículos...",
@@ -65,9 +71,9 @@ const uiTranslations = {
     vegan: "Vegano",
     nuts: "Frutos Secos",
     glutenFree: "Sin Gluten",
-    citrus: "Cítricos",
-    strawberry: "Fresa",
-    cherry: "Cereza",
+    egg: "Huevo",
+    dairy: "Lácteos",
+    soy: "Soja",
   },
   sr: {
     search: "Pretraži proizvode...",
@@ -78,9 +84,9 @@ const uiTranslations = {
     vegan: "Vegansko / Posno",
     nuts: "Orašasti Plodovi",
     glutenFree: "Bez Glutena",
-    citrus: "Citrusi",
-    strawberry: "Jagoda",
-    cherry: "Višnja",
+    egg: "Jaje",
+    dairy: "Mlečni Proizvodi",
+    soy: "Soja",
   },
   bg: {
     search: "Търсене на продукти...",
@@ -91,9 +97,9 @@ const uiTranslations = {
     vegan: "Веган / Постно",
     nuts: "Ядки",
     glutenFree: "Без Глутен",
-    citrus: "Цитруси",
-    strawberry: "Ягода",
-    cherry: "Череша",
+    egg: "Яйце",
+    dairy: "Млечни Продукти",
+    soy: "Соя",
   },
   ro: {
     search: "Căutați produse...",
@@ -104,9 +110,9 @@ const uiTranslations = {
     vegan: "Vegan / De Post",
     nuts: "Nuci",
     glutenFree: "Fără Gluten",
-    citrus: "Citrice",
-    strawberry: "Căpșună",
-    cherry: "Cireașă",
+    egg: "Ou",
+    dairy: "Lactate",
+    soy: "Soia",
   },
 };
 
@@ -418,30 +424,45 @@ export default function MenuClient({
                         )}
                       </div>
                       {(item.isVegan ||
-                        item.hasNuts ||
-                        item.hasStrawberry ||
-                        item.hasCherry ||
                         item.isGlutenFree ||
-                        item.hasCitrus) && (
-                        <div className="flex flex-wrap gap-2 mt-3 pt-3 border-t border-slate-100/50">
+                        item.hasEgg ||
+                        item.hasDairy ||
+                        item.hasNuts ||
+                        item.hasSoy) && (
+                        <div className="flex flex-wrap gap-2 mt-3 pt-3 border-t border-slate-100">
                           {item.isVegan && (
-                            <span className="flex items-center gap-1 text-[10px] font-bold bg-green-100 text-green-700 px-2 py-1 rounded-md shadow-sm">
+                            <span className="flex items-center gap-1 text-[11px] font-medium bg-green-100 border border-green-200 text-green-800 px-2 py-1 rounded-md">
                               🌱 {ui.vegan}
                             </span>
                           )}
-                          {item.hasNuts && (
-                            <span className="flex items-center gap-1 text-[10px] font-bold bg-orange-100 text-orange-700 px-2 py-1 rounded-md shadow-sm">
-                              🥜 {ui.nuts}
-                            </span>
-                          )}
+
                           {item.isGlutenFree && (
-                            <span className="flex items-center gap-1 text-[10px] font-bold bg-blue-100 text-blue-700 px-2 py-1 rounded-md shadow-sm">
+                            <span className="flex items-center gap-1 text-[11px] font-medium bg-teal-100 border border-teal-200 text-teal-800 px-2 py-1 rounded-md">
                               🌾 {ui.glutenFree}
                             </span>
                           )}
-                          {item.hasCitrus && (
-                            <span className="flex items-center gap-1 text-[10px] font-bold bg-yellow-100 text-yellow-700 px-2 py-1 rounded-md shadow-sm">
-                              🍋 {ui.citrus}
+
+                          {item.hasEgg && (
+                            <span className="flex items-center gap-1 text-[11px] font-medium bg-yellow-100 border border-yellow-200 text-yellow-800 px-2 py-1 rounded-md">
+                              🥚 {ui.egg}
+                            </span>
+                          )}
+
+                          {item.hasDairy && (
+                            <span className="flex items-center gap-1 text-[11px] font-medium bg-blue-100 border border-blue-200 text-blue-800 px-2 py-1 rounded-md">
+                              🥛 {ui.dairy}
+                            </span>
+                          )}
+
+                          {item.hasNuts && (
+                            <span className="flex items-center gap-1 text-[11px] font-medium bg-orange-100 border border-orange-200 text-orange-800 px-2 py-1 rounded-md">
+                              🥜 {ui.nuts}
+                            </span>
+                          )}
+
+                          {item.hasSoy && (
+                            <span className="flex items-center gap-1 text-[11px] font-medium bg-gray-100 border border-gray-200 text-gray-800 px-2 py-1 rounded-md">
+                              🫘 {ui.soy}
                             </span>
                           )}
                         </div>

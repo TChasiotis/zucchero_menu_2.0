@@ -179,7 +179,6 @@ export const siropiasta: MenuItem[] = [
     categoryId: "siropiasta",
     price: 14.00,
     unit: "kg",
-    hasCherry: true,
     translations: {
       el: { name: "Φωλιά με Βύσσινο", description: "Φύλλο σε σχήμα φωλιάς, γεμισμένο με βύσσινα" },
       en: { name: "Sour Cherry Nest", description: "Phyllo nest filled with sour cherries" },
@@ -238,7 +237,6 @@ export const siropiasta: MenuItem[] = [
     price: 3.50,
     isSoldOut: false,
     hasNuts: true,   
-    hasCitrus: true, 
     translations: {
       el: { name: "Πορτοκαλόπιτα", description: "Πίτα με φύλλο και πορτοκάλι, σιροπιασμένη" },
       en: { name: "Portokalopita", description: "Orange phyllo cake soaked in syrup" },

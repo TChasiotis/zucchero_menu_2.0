@@ -162,7 +162,6 @@ export const iceCream: MenuItem[] = [
     id: "ice_cream_stick_strawberry",
     categoryId: "ice_cream",
     price: 1.50,
-    hasStrawberry: true,
     translations: {
       el: { name: "Παγωτίνι Ξυλάκι Φράουλα", description: "Δροσερό μίνι παγωτό φράουλα σε ξυλάκι" },
       en: { name: "Mini Strawberry Ice Cream Stick", description: "Refreshing mini strawberry ice cream on a stick" },
@@ -178,7 +177,6 @@ export const iceCream: MenuItem[] = [
     id: "ice_cream_cone_strawberry",
     categoryId: "ice_cream",
     price: 1.50,
-    hasStrawberry: true,
     translations: {
       el: { name: "Παγωτίνι Χωνάκι Φράουλα", description: "Τραγανό μίνι χωνάκι με παγωτό φράουλα" },
       en: { name: "Mini Strawberry Ice Cream Cone", description: "Crunchy mini cone with strawberry ice cream" },

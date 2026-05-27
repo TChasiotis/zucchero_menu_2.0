@@ -6,7 +6,6 @@ export const juices: MenuItem[] = [
     id: "juice_fresh_orange_250",
     categoryId: "juices",
     price: 2.30,
-    hasCitrus: true,
     isSoldOut: false,
     translations: {
       el: { name: "Φρέσκος Χυμός Πορτοκάλι 250ml", description: "100% φυσικός χυμός από διαλεχτά ελληνικά πορτοκάλια, γεμάτος βιταμίνη C" },
@@ -23,7 +22,6 @@ export const juices: MenuItem[] = [
     id: "juice_fresh_orange_500",
     categoryId: "juices",
     price: 3.30,
-    hasCitrus: true,
     isSoldOut: false,
     translations: {
       el: { name: "Φρέσκος Χυμός Πορτοκάλι 500ml", description: "100% φυσικός χυμός από διαλεχτά ελληνικά πορτοκάλια, γεμάτος βιταμίνη C" },
@@ -40,7 +38,6 @@ export const juices: MenuItem[] = [
     id: "juice_fresh_apple_orange_carrot_250",
     categoryId: "juices",
     price: 2.30,
-    hasCitrus: true,
     isSoldOut: false,
     translations: {
       el: { name: "Φρέσκος Χυμός Μήλο, Πορτοκάλι & Καρότο 250ml", description: "Αναζωογονητικός φυσικός χυμός. Ενέργεια και ευεξία σε κάθε γουλιά" },
@@ -57,7 +54,6 @@ export const juices: MenuItem[] = [
     id: "juice_fresh_apple_orange_carrot_500",
     categoryId: "juices",
     price: 3.30,
-    hasCitrus: true,
     isSoldOut: false,
     translations: {
       el: { name: "Φρέσκος Χυμός Μήλο, Πορτοκάλι & Καρότο 500ml", description: "Αναζωογονητικός φυσικός χυμός. Ενέργεια και ευεξία σε κάθε γουλιά" },
@@ -74,8 +70,6 @@ export const juices: MenuItem[] = [
     id: "juice_fresh_pomegranate_multi_250",
     categoryId: "juices",
     price: 2.30,
-    hasCitrus: true,
-    hasCherry: true,
     isSoldOut: false,
     translations: {
       el: { name: "Φρέσκος Χυμός Ρόδι, Σταφύλι, Μήλο & Καρότο 250ml", description: "Πολυβιταμινούχος φυσικός χυμός, η απόλυτη αντιοξειδωτική ασπίδα" },
@@ -92,8 +86,6 @@ export const juices: MenuItem[] = [
     id: "juice_fresh_pomegranate_multi_500",
     categoryId: "juices",
     price: 3.30,
-    hasCitrus: true,
-    hasCherry: true,
     isSoldOut: false,
     translations: {
       el: { name: "Φρέσκος Χυμός Ρόδι, Σταφύλι, Μήλο & Καρότο 500ml", description: "Πολυβιταμινούχος φυσικός χυμός, η απόλυτη αντιοξειδωτική ασπίδα" },
@@ -120,7 +112,6 @@ export const juices: MenuItem[] = [
     id: "juice_santal_strawberry_banana",
     categoryId: "juices",
     price: 2.50,
-    hasStrawberry: true,
     isSoldOut: false,
     translations: {
       el: { name: "Χυμός Φράουλα & Μπανάνα ", description: "Απολαυστικός χυμός με την τέλεια ισορροπία γλυκιάς φράουλας και απαλής μπανάνας" },
@@ -153,7 +144,6 @@ export const juices: MenuItem[] = [
     id: "juice_santal_blueberry",
     categoryId: "juices",
     price: 2.50,
-    hasCherry: true,
     isSoldOut: false,
     translations: {
       el: { name: "Χυμός Μύρτιλο ", description: "Εκλεκτός χυμός μύρτιλου, γεμάτος γεύση και ευεργετικές ιδιότητες" },
@@ -170,7 +160,6 @@ export const juices: MenuItem[] = [
     id: "juice_santal_ace",
     categoryId: "juices",
     price: 2.50,
-    hasCitrus: true,
     isSoldOut: false,
     translations: {
       el: { name: "Χυμός Πορτοκάλι, Λεμόνι & Καρότο ", description: "Κλασικός ιταλικός συνδυασμός (ACE) για έξτρα ενέργεια και βιταμίνες" },

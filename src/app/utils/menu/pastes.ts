@@ -123,7 +123,6 @@ export const pastes: MenuItem[] = [
     categoryId: "pastes",
     price: 3.5,
     isSoldOut: false,
-    hasCherry: true,
     translations: {
       el: { name: "Πάστα Black Forest", description: "Πάστα σοκολάτας με στρώσεις από βύσσινα" },
       en: { name: "Black Forest Pastry", description: "Chocolate cake layered with sour cherries and chocolate" },
@@ -286,7 +285,6 @@ export const pastes: MenuItem[] = [
     categoryId: "pastes",
     price: 3.5,
     isSoldOut: false,
-    hasCitrus: true,
     translations: {
       el: { name: "Πάστα Lemon Pie", description: "Αφράτη πάστα με δροσερή κρέμα λεμονιού και επικάλυψη μαρέγκας" },
       en: { name: "Lemon Pie Pastry", description: "Fluffy pastry with refreshing lemon cream and meringue topping" },
@@ -303,7 +301,6 @@ export const pastes: MenuItem[] = [
     categoryId: "pastes",
     price: 3.5,
     isSoldOut: false,
-    hasCitrus: true,
     translations: {
       el: { name: "Lemon Pie με τριμμένο μπισκότο", description: "Δροσερή λεμονάτη πάστα σε κυπελάκι με κρέμα, μαρέγκα σε βάση τριμμένου μπισκότου" },
       en: { name: "Lemon Pie with Crushed Biscuit", description: "Refreshing lemon-flavored served in a cup with smooth cream, meringue on a crushed biscuits base" },
@@ -320,7 +317,6 @@ export const pastes: MenuItem[] = [
     categoryId: "pastes",
     price: 3.5,
     isSoldOut: false,
-    hasCherry: true,
     translations: {
       el: { name: "Cheesecake με τριμμένο μπισκότο", description: "Αφράτο cheesecake σε κυπελάκι σε βάση τριμμένου μπισκότου" },
       en: { name: "Cheesecake with Crushed Biscuit", description: "Creamy cheesecake served in a cup on a crushed biscuits base" },
@@ -337,7 +333,6 @@ export const pastes: MenuItem[] = [
     categoryId: "pastes",
     price: 4.0,
     isSoldOut: false,
-    hasCherry: true,
     translations: {
       el: { name: "Τάρτα Cheesecake Φούρνου", description: "Ψημένο cheesecake σε τραγανή βάση τάρτας" },
       en: { name: "Baked Cheesecake Tart", description: "Oven-baked cheesecake in a buttery tart crust" },
@@ -354,7 +349,6 @@ export const pastes: MenuItem[] = [
     categoryId: "pastes",
     price: 4.0,
     isSoldOut: false,
-    hasCitrus: true,
     translations: {
       el: { name: "Τάρτα Lemon Pie Φούρνου", description: "Κλασική γεύση λεμονιού σε βάση τάρτας" },
       en: { name: "Baked Lemon Pie Tart", description: "Classic lemon pie flavor baked in tart form" },
@@ -371,7 +365,6 @@ export const pastes: MenuItem[] = [
     categoryId: "pastes",
     price: 4.0,
     isSoldOut: false,
-    hasCitrus: true,
     translations: {
       el: { name: "Τάρτα Lemon Pie Φούρνου (χωρίς μαρέγκα)", description: "Κλασική γεύση λεμονιού σε βάση τάρτας χωρίς την κλασσική μαρέγκα" },
       en: { name: "Baked Lemon Pie Tart (without meringue)", description: "Classic lemon pie flavor baked in tart form without the classic meringue topping" },
@@ -388,9 +381,6 @@ export const pastes: MenuItem[] = [
     categoryId: "pastes",
     price: 4.0,
     isSoldOut: false,
-    hasStrawberry: true,
-    hasCherry: true,
-    hasCitrus: true,
     translations: {
       el: { name: "Τάρτα με Φρούτα και Κρέμα", description: "Τάρτα με κρέμα πατισερί και φρέσκα φρούτα" },
       en: { name: "Fruit Tart with Cream", description: "Tart filled with patisserie cream and fresh fruits" },
@@ -408,7 +398,6 @@ export const pastes: MenuItem[] = [
     price: 5.5,
     isSoldOut: false,
     hasNuts: true,
-    hasCitrus: true,
     translations: {
       el: { name: "Τάρτα με Λεμόνι", description: "Τάρτα με δροσερή λεμονόκρεμα" },
       en: { name: "Lemon Tart", description: "Tangy lemon cream in a buttery tart base" },
@@ -473,7 +462,6 @@ export const pastes: MenuItem[] = [
     categoryId: "pastes",
     price: 3.50,
     isSoldOut: false,
-    hasCherry: true,
     translations: {
       el: { name: "Βυσσινόπιτα με Κρέμα Παραδοσιακή", description: "Μαλακή ζύμη με πλούσια γέμιση βελούδινης κρέμας και ζουμερά βύσσινα" },
       en: { name: "Traditional Sour Cherry & Cream Pie", description: "Soft pastry crust filled with rich, velvety custard cream and juicy sour cherries" },
@@ -490,7 +478,6 @@ export const pastes: MenuItem[] = [
     categoryId: "pastes",
     price: 3.50,
     isSoldOut: false,
-    hasCitrus: true,
     translations: {
       el: { name: "Λεμονόπιτα Παραδοσιακή", description: "Μαλακή ζύμη με πλούσια, δροσερή και γεμάτη γέμιση από κρέμα λεμονιού" },
       en: { name: "Traditional Lemon Pie", description: "Soft pastry crust with a rich, refreshing and tangy lemon cream filling" },
