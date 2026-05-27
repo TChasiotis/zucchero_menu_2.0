@@ -30,8 +30,9 @@ export default function PrintLayoutPage() {
       </div>
 
       {/* Text Block - Ακριβώς όπως το ήθελες */}
+      {/* Χρησιμοποιούμε gap-3 για να ισαπέχει το separator από το QR και τα κείμενα */}
       <div className="text-center w-full flex flex-col items-center gap-3">
-        {/* Διαχωριστικό */}
+        {/* Διαχωριστικό σχεδιάκι ◆ - Χωρίς padding-bottom */}
         <div className="flex items-center justify-center gap-2">
           <div className="h-px bg-slate-300 w-10"></div>
           <div className="text-slate-400 text-xs">◆</div>
