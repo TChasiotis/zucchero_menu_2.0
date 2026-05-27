@@ -37,11 +37,17 @@ export default function QRCard({
       </div>
 
       <div className="text-center w-full flex flex-col items-center gap-3">
+        {/* === Διορθωμένο Διαχωριστικό - Πιο φιλικό στην εκτύπωση === */}
         <div className="flex items-center justify-center gap-2">
-          <div className="h-px bg-slate-300 w-10"></div>
+          {/* ΑΛΛΑΓΗ ΕΔΩ: h-px bg-slate-300 EGINE border-t border-slate-300 */}
+          <div className="border-t border-slate-300 w-10"></div>
+
           <div className="text-slate-400 text-xs">◆</div>
-          <div className="h-px bg-slate-300 w-10"></div>
+
+          {/* ΑΛΛΑΓΗ ΕΔΩ: h-px bg-slate-300 EGINE border-t border-slate-300 */}
+          <div className="border-t border-slate-300 w-10"></div>
         </div>
+        {/* ========================================================== */}
 
         <div className="flex flex-col gap-1.5">
           <h3 className="text-2xl font-extrabold uppercase tracking-tight text-black">
