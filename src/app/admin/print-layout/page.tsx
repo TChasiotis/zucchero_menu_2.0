@@ -6,12 +6,11 @@ export default function PrintLayoutPage() {
   const menuLink = "https://zucchero-cafe.pages.dev/menu/welcome";
   const wifiString = "WIFI:S:ZUCCHERO_GUEST;T:WPA;P:2310215575;;";
 
-  // Αυτό είναι το "Καλούπι" που ζήτησες για μία κάρτα Α6
+  // Το καλούπι της κάρτας Α6 με box-border για να μην ξεχειλώνει
   const Card = ({ type }: { type: "menu" | "wifi" }) => (
     <div
-      className="bg-white flex flex-col items-center justify-between border border-dashed border-slate-300"
-      // Το μέγεθος είναι ακριβώς Α6. Το padding βοηθάει στο layout
-      style={{ width: "10.5cm", height: "14.85cm", padding: "1.2cm 1cm" }}
+      className="bg-white flex flex-col items-center justify-between box-border border border-dashed border-slate-300"
+      style={{ width: "105mm", height: "148.5mm", padding: "12mm 10mm" }}
     >
       {/* Logo */}
       <img
@@ -30,7 +29,7 @@ export default function PrintLayoutPage() {
         />
       </div>
 
-      {/* Text Block - Ακριβώς όπως το έστειλες */}
+      {/* Text Block - Ακριβώς όπως το ήθελες */}
       <div className="text-center w-full flex flex-col items-center gap-3">
         {/* Διαχωριστικό */}
         <div className="flex items-center justify-center gap-2">
@@ -53,10 +52,10 @@ export default function PrintLayoutPage() {
     </div>
   );
 
-  // Αυτό δημιουργεί μία ολόκληρη σελίδα Α4 (έχει μέσα 4 κάρτες)
+  // Χρήση αυστηρού CSS Grid 2x2 για να μην μπορεί να "σπάσει" η σελίδα
   const A4Page = ({ type }: { type: "menu" | "wifi" }) => (
     <div
-      className="flex flex-wrap bg-white"
+      className="grid grid-cols-2 grid-rows-2 bg-white box-border print:m-0"
       style={{ width: "210mm", height: "297mm", pageBreakAfter: "always" }}
     >
       <Card type={type} />
@@ -67,9 +66,29 @@ export default function PrintLayoutPage() {
   );
 
   return (
-    <div className="min-h-screen bg-slate-200 print:bg-white">
-      {/* Το μενού ελέγχου (Κρύβεται στην εκτύπωση) */}
-      <div className="print:hidden p-6 bg-slate-800 text-white text-center flex flex-col items-center justify-center gap-3">
+    <div className="min-h-screen bg-slate-200 print:bg-white flex flex-col items-center">
+      {/* Injection κανόνων εκτύπωσης για να εξαφανιστούν τα περιθώρια του browser */}
+      <style>{`
+        @page {
+          size: A4 portrait;
+          margin: 0mm !important;
+        }
+        @media print {
+          html, body {
+            margin: 0mm !important;
+            padding: 0mm !important;
+            background: #ffffff;
+          }
+          .print-container {
+            box-shadow: none !important;
+            margin: 0mm !important;
+            padding: 0mm !important;
+          }
+        }
+      `}</style>
+
+      {/* Το μενού ελέγχου (Κρύβεται αυτόματα στην εκτύπωση) */}
+      <div className="print:hidden w-full p-6 bg-slate-800 text-white text-center flex flex-col items-center justify-center gap-3">
         <h1 className="text-2xl font-bold">Εργαστήριο Εκτύπωσης Zucchero</h1>
         <p className="text-sm text-slate-300">
           Στις ρυθμίσεις του εκτυπωτή επέλεξε:
@@ -87,7 +106,7 @@ export default function PrintLayoutPage() {
       </div>
 
       {/* Οι 4 Σελίδες (2 Μπροστά / 2 Πίσω) */}
-      <div className="flex flex-col items-center print:block shadow-2xl">
+      <div className="print-container flex flex-col items-center print:block shadow-2xl bg-white">
         <A4Page type="menu" /> {/* Σελίδα 1: Μπροστά (Μενού) */}
         <A4Page type="wifi" /> {/* Σελίδα 2: Πίσω (WiFi) */}
         <A4Page type="menu" /> {/* Σελίδα 3: Μπροστά (Μενού) */}
