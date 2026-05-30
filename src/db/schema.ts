@@ -3,6 +3,7 @@ import { sqliteTable, text, real, integer } from "drizzle-orm/sqlite-core";
 // Πίνακας για τις Κατηγορίες (Categories)
 export const categories = sqliteTable("categories", {
   id: text("id").primaryKey(),
+  isNotAvailable: integer("is_not_available", { mode: "boolean" }).default(false), 
   translations: text("translations", { mode: "json" }).notNull(),
 });
 

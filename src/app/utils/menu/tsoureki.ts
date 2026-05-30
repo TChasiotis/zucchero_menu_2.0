@@ -33,6 +33,8 @@ export const tsoureki: MenuItem[] = [
     price: 12.00,
     unit: "kg",
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Κλασσικό Τσουρέκι", description: "Παραδοσιακό ελληνικό γλυκό ψωμί, μαλακό και εξαιρετικά αρωματικό" },
       en: { name: "Classic Tsoureki", description: "Traditional Greek sweet bread, soft and fragrant" },
@@ -50,6 +52,8 @@ export const tsoureki: MenuItem[] = [
     price: 12.00,
     unit: "kg",
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Μίνι Τσουρεκάκια", description: "Αφράτα, μικρά ατομικά τσουρεκάκια, ιδανικά για να συνοδεύσουν τον καφέ σας" },
       en: { name: "Mini Tsoureki", description: "Soft, small individual tsoureki, perfect for pairing with your coffee" },

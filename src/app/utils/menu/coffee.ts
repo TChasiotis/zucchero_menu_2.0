@@ -8,6 +8,7 @@ export const coffee: MenuItem[] = [
     id: "coffee_freddo_espresso",
     categoryId: "coffee",
     price: 3.50,
+    isVegan: true,
     isSoldOut: false,
     translations: {
       el: { name: "Freddo Espresso", description: "Διπλή δόση espresso χτυπημένη με πάγο για πλούσιο αφρό" },
@@ -40,6 +41,7 @@ export const coffee: MenuItem[] = [
     id: "coffee_frappe",
     categoryId: "coffee",
     price: 3.00,
+    isVegan: true,
     isSoldOut: false,
     translations: {
       el: { name: "Nescafé Φραπέ", description: "Ο κλασικός, αγαπημένος παγωμένος στιγμιαίος καφές" },
@@ -88,6 +90,7 @@ export const coffee: MenuItem[] = [
     id: "coffee_iced_americano",
     categoryId: "coffee",
     price: 3.50,
+    isVegan: true,
     isSoldOut: false,
     translations: {
       el: { name: "Iced Americano", description: "Διπλή δόση espresso αραιωμένη με παγωμένο νερό" },
@@ -121,6 +124,7 @@ export const coffee: MenuItem[] = [
     id: "coffee_espresso_single",
     categoryId: "coffee",
     price: 3.00,
+    isVegan: true,
     isSoldOut: false,
     translations: {
       el: { name: "Espresso (Μονός)", description: "Αυθεντικός ιταλικός espresso με πλούσια κρέμα" },
@@ -137,6 +141,7 @@ export const coffee: MenuItem[] = [
     id: "coffee_espresso_double",
     categoryId: "coffee",
     price: 3.50,
+    isVegan: true,
     isSoldOut: false,
     translations: {
       el: { name: "Espresso (Διπλός)", description: "Διπλή δόση αυθεντικού ιταλικού espresso" },
@@ -185,6 +190,7 @@ export const coffee: MenuItem[] = [
     id: "coffee_nescafe_hot",
     categoryId: "coffee",
     price: 3.00,
+    isVegan: true,
     isSoldOut: false,
     translations: {
       el: { name: "Nescafé (Ζεστός)", description: "Ο κλασικός, τονωτικός ζεστός στιγμιαίος καφές" },
@@ -201,6 +207,7 @@ export const coffee: MenuItem[] = [
     id: "coffee_greek_single",
     categoryId: "coffee",
     price: 2.50,
+    isVegan: true,
     isSoldOut: false,
     translations: {
       el: { name: "Ελληνικός (Μονός)", description: "Παραδοσιακός ελληνικός καφές ψημένος στο μπρίκι" },
@@ -217,6 +224,7 @@ export const coffee: MenuItem[] = [
     id: "coffee_greek_double",
     categoryId: "coffee",
     price: 3.00,
+    isVegan: true,
     isSoldOut: false,
     translations: {
       el: { name: "Ελληνικός (Διπλός)", description: "Διπλή δόση παραδοσιακού ελληνικού καφέ" },
@@ -297,6 +305,7 @@ export const coffee: MenuItem[] = [
     id: "coffee_americano_single",
     categoryId: "coffee",
     price: 3.00,
+    isVegan: true,
     isSoldOut: false,
     translations: {
       el: { name: "Espresso Americano (Μονός)", description: "Espresso αραιωμένος με ζεστό νερό" },
@@ -313,6 +322,7 @@ export const coffee: MenuItem[] = [
     id: "coffee_americano_double",
     categoryId: "coffee",
     price: 3.50,
+    isVegan: true,
     isSoldOut: false,
     translations: {
       el: { name: "Espresso Americano (Διπλός)", description: "Διπλή δόση espresso αραιωμένη με ζεστό νερό" },
@@ -329,6 +339,7 @@ export const coffee: MenuItem[] = [
     id: "coffee_lungo_single",
     categoryId: "coffee",
     price: 3.00,
+    isVegan: true,
     isSoldOut: false,
     translations: {
       el: { name: "Espresso Lungo (Μονός)", description: "Espresso με μεγαλύτερη εκχύλιση νερού" },
@@ -345,6 +356,7 @@ export const coffee: MenuItem[] = [
     id: "coffee_lungo_double",
     categoryId: "coffee",
     price: 3.50,
+    isVegan: true,
     isSoldOut: false,
     translations: {
       el: { name: "Espresso Lungo (Διπλός)", description: "Διπλή δόση espresso με μεγαλύτερη εκχύλιση νερού" },
@@ -361,6 +373,7 @@ export const coffee: MenuItem[] = [
     id: "coffee_filter_regular",
     categoryId: "coffee",
     price: 3.00,
+    isVegan: true,
     isSoldOut: false,
     translations: {
       el: { name: "Καφές Φίλτρου (Κλασικός)", description: "Αρωματικός καφές φίλτρου με γεμάτο σώμα" },
@@ -377,6 +390,7 @@ export const coffee: MenuItem[] = [
     id: "coffee_filter_decaf",
     categoryId: "coffee",
     price: 3.00,
+    isVegan: true,
     isSoldOut: false,
     translations: {
       el: { name: "Καφές Φίλτρου (Ντεκαφεϊνέ)", description: "Ολοκληρωμένη γεύση καφέ φίλτρου, χωρίς καφεΐνη" },
@@ -393,6 +407,7 @@ export const coffee: MenuItem[] = [
     id: "coffee_filter_salted_caramel",
     categoryId: "coffee",
     price: 3.00,
+    isVegan: true,
     isSoldOut: false,
     translations: {
       el: { name: "Καφές Φίλτρου (Salted Caramel)", description: "Αρωματικός καφές φίλτρου με νότες από αλμυρή καραμέλα" },
@@ -409,6 +424,7 @@ export const coffee: MenuItem[] = [
     id: "coffee_filter_vanilla_hazelnut",
     categoryId: "coffee",
     price: 3.00,
+    isVegan: true,
     hasNuts: true,
     isSoldOut: false,
     translations: {
@@ -477,6 +493,7 @@ export const coffee: MenuItem[] = [
     id: "coffee_milk_choices",
     categoryId: "coffee",
     price: 0,
+    hasDairy: true,
     hidePrice: true,
     isSoldOut: false,
     translations: {
@@ -511,6 +528,7 @@ export const coffee: MenuItem[] = [
     id: "coffee_extra_shot",
     categoryId: "coffee",
     price: 0.40,
+    isVegan: true,
     isSoldOut: false,
     translations: {
       el: { name: "Έξτρα Δόση Espresso", description: "Μπορεί να προστεθεί μόνο σε καφέδες με βάση το Espresso" },

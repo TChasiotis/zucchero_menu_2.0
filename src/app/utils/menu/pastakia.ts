@@ -2,13 +2,14 @@ import { MenuItem } from "../menuData";
 
 export const pastakia: MenuItem[] = [
   // --- ΠΟΤΗΡΑΚΙΑ (ΠΡΑΛΙΝΕΣ - GLUTEN FREE) ---
-  // --- ΠΟΤΗΡΑΚΙΑ (ΠΡΑΛΙΝΕΣ - GLUTEN FREE) ---
   {
     id: "pastaki_caramel_cup",
     categoryId: "pastakia",
     price: 1.50,
     isSoldOut: false,
     isGlutenFree: true,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Ποτηράκι Καραμέλα", description: "Ατομικό γλυκό σε ποτηράκι με κρέμα καραμέλας και επικάλυψη καραμέλας" },
       en: { name: "Caramel Praline Cup", description: "Mini dessert cup with caramel cream and caramel topping" },
@@ -26,6 +27,8 @@ export const pastakia: MenuItem[] = [
     price: 1.50,
     isSoldOut: false,
     isGlutenFree: true,
+    hasDairy: true,
+    hasSoy: true,
     translations: {
       el: { name: "Ποτηράκι Σοκολάτα", description: "Πραλίνα σοκολάτας με σοκολατένια γκανάς σε ποτηράκι" },
       en: { name: "Chocolate Praline Cup", description: "Moist chocolate praline with chocolate ganache in a cup" },
@@ -43,6 +46,8 @@ export const pastakia: MenuItem[] = [
     price: 1.50,
     isSoldOut: false,
     isGlutenFree: true,
+    hasDairy: true,
+    hasSoy: true,
     translations: {
       el: { name: "Ποτηράκι Τριλογία Σοκολάτας", description: "Γλυκό σε ποτηράκι με τρεις στρώσεις διαφορετικής πραλίνας σοκολάτας" },
       en: { name: "Chocolate Trilogy Cup", description: "Dessert cup with three layers of different chocolate pralines" },
@@ -60,6 +65,8 @@ export const pastakia: MenuItem[] = [
     price: 1.50,
     isSoldOut: false,
     isGlutenFree: true,
+    hasDairy: true,
+    hasSoy: true,
     translations: {
       el: { name: "Ποτηράκι Φράουλα - Σοκολάτα", description: "Συνδυασμός πραλίνας φράουλας και σοκολάτας σε ποτηράκι" },
       en: { name: "Strawberry-Chocolate Cup", description: "Strawberry and chocolate praline combined in a cup" },
@@ -77,6 +84,8 @@ export const pastakia: MenuItem[] = [
     price: 1.50,
     isGlutenFree: true,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Ποτηράκι Κρέμα - Φράουλα", description: "Γλυκό σε ποτηράκι με συνδυασμό λευκής κρέμας και πραλίνας φράουλας" },
       en: { name: "Cream-Strawberry Cup", description: "Dessert cup combining white cream and strawberry praline" },
@@ -94,6 +103,8 @@ export const pastakia: MenuItem[] = [
     price: 1.50,
     isSoldOut: false,
     isGlutenFree: true,
+    hasDairy: true,
+    hasSoy: true,
     hasNuts: true,
     translations: {
       el: { name: "Ποτηράκι Σοκολάτα - Φράουλα - Φυστίκι", description: "Πραλίνες σε ποτηράκι με συνδυασμό σοκολάτας, φράουλας και φυστικιού" },
@@ -110,6 +121,9 @@ export const pastakia: MenuItem[] = [
     id: "pastaki_profiterole_cup",
     categoryId: "pastakia",
     price: 1.50,
+    hasDairy: true,
+    hasEgg: true,
+    hasSoy: true,
     translations: {
       el: { name: "Ποτηράκι Προφιτερόλ", description: "Ατομικό προφιτερόλ με σουδάκια, κρέμα και σως σοκολάτας" },
       en: { name: "Mini Profiterole Cup", description: "Individual cup with choux pastries, cream, and chocolate sauce" },
@@ -128,6 +142,8 @@ export const pastakia: MenuItem[] = [
     categoryId: "pastakia",
     price: 1.50,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Ποτηράκι Lotus Biscoff", description: "Γλυκό σε ποτηράκι με πραλίνα Lotus και τριμμένο μπισκότο" },
       en: { name: "Lotus Biscoff Cup", description: "Dessert cup with Lotus cream and crumbled Lotus biscuit" },
@@ -144,6 +160,8 @@ export const pastakia: MenuItem[] = [
     categoryId: "pastakia",
     price: 1.50,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Ποτηράκι Μπισκότο", description: "Γλυκό σε ποτηράκι με πραλίνα μπισκότου και τριμμένο μπισκότο" },
       en: { name: "Biscuit Cream Cup", description: "Dessert cup with biscuit praline and crumbled biscuit" },
@@ -160,6 +178,8 @@ export const pastakia: MenuItem[] = [
     categoryId: "pastakia",
     price: 1.50,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Ποτηράκι Cheesecake", description: "Cheesecake σε ποτηράκι με απαλή κρέμα, βύσσινο και βάση μπισκότου" },
       en: { name: "Cheesecake Cup", description: "Cheesecake in a cup with soft cream, sour cherry and biscuit base" },
@@ -176,6 +196,8 @@ export const pastakia: MenuItem[] = [
     categoryId: "pastakia",
     price: 1.50,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Ποτηράκι Lemon Pie", description: "Lemon Pie σε ποτηράκι με λεμονάτη γέμιση, κρέμα και βάση μπισκότου" },
       en: { name: "Lemon Pie Cup", description: "Lemon pie in a cup with tangy filling, cream and biscuit base" },
@@ -192,6 +214,8 @@ export const pastakia: MenuItem[] = [
     categoryId: "pastakia",
     price: 1.30,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Ταρτάκι Lemon Pie", description: "Μικρή τάρτα με λεμονόκρεμα" },
       en: { name: "Mini Lemon Tart", description: "Small tart with tangy lemon cream" },
@@ -208,6 +232,8 @@ export const pastakia: MenuItem[] = [
     categoryId: "pastakia",
     price: 1.30,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Ταρτάκι Φρούτα & Κρέμα", description: "Μικρή τάρτα με φρέσκα φρούτα και κρέμα πατισερί" },
       en: { name: "Mini Fruit Tart with Cream", description: "Small tart filled with pastry cream and fresh fruits" },
@@ -226,6 +252,9 @@ export const pastakia: MenuItem[] = [
     categoryId: "pastakia",
     price: 1.30,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
+    hasSoy: true,
     translations: {
       el: { name: "Κωκάκι", description: "Μαλακό παντεσπάνι με γέμιση βανίλιας και σοκολατένια επικάλυψη" },
       en: { name: "Kokaki", description: "Soft sponge cake with vanilla filling and chocolate glaze" },
@@ -243,6 +272,9 @@ export const pastakia: MenuItem[] = [
     price: 1.30,
     isSoldOut: false,
     hasNuts: true,
+    hasDairy: true,
+    hasEgg: true,
+    hasSoy: true,
     translations: {
       el: { name: "Κωκάκι με Λευκή Σοκολάτα", description: "Κλασικό κωκάκι με επικάλυψη λευκής σοκολάτας και αμύγδαλο" },
       en: { name: "Kokaki with White Chocolate", description: "Classic kokaki topped with white chocolate" },
@@ -260,6 +292,9 @@ export const pastakia: MenuItem[] = [
     price: 1.30,
     isSoldOut: false,
     hasNuts: true,
+    hasDairy: true,
+    hasEgg: true,
+    hasSoy: true,
     translations: {
       el: { name: "Κωκάκι με Ferrero", description: "Κλασσικό κωκάκι με επικάλυψη Ferrero" },
       en: { name: "Kokaki with Ferrero", description: "Classic kokaki topped with Ferrero praline" },
@@ -276,6 +311,8 @@ export const pastakia: MenuItem[] = [
     categoryId: "pastakia",
     price: 1.30,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Χιονούλα", description: "Κλασσικό κωκάκι με επικάλυψη Ινδοκάρυδου" },
       en: { name: "Kokaki with Desiccated Coconut (Chionoula)", description: "Classic kokaki topped with desiccated coconut" },
@@ -292,6 +329,9 @@ export const pastakia: MenuItem[] = [
     categoryId: "pastakia",
     price: 1.30,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
+    hasSoy: true,
     translations: {
       el: { name: "Κωκάκι με επικάλυψη Τρούφας", description: "Κωκάκι με γέμιση σοκολάτας και επικάλυψη τρούφας" },
       en: { name: "Kokaki with Chocolate Sprinkles", description: "Kokaki filled with chocolate topped with chocolate sprinkles" },
@@ -311,6 +351,9 @@ export const pastakia: MenuItem[] = [
     price: 1.30,
     hasNuts: true,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
+    hasSoy: true,
     translations: {
       el: { name: "Καρυδάτα με Σοκολάτα", description: "Παραδοσιακά, μαλακά καρυδάτα κεράσματα, γεμιστά με πλούσια στρώση σοκολάτας" },
       en: { name: "Walnut & Chocolate Petit Fours", description: "Traditional soft walnut treats, sandwiched with a rich chocolate filling" },
@@ -327,6 +370,9 @@ export const pastakia: MenuItem[] = [
     categoryId: "pastakia",
     price: 1.30,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
+    hasSoy: true,
     translations: {
       el: { name: "Τρουφάκι", description: "Ζύμη τύπου κορμού με σοκολάτα, σε σχήμα μικρής μπουκιάς με τρούφα" },
       en: { name: "Classic Chocolate Truffle", description: "Bite-sized mosaic dough mixed with chocolate, coated in chocolate sprinkles" },
@@ -343,6 +389,9 @@ export const pastakia: MenuItem[] = [
     categoryId: "pastakia",
     price: 1.30,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
+    hasSoy: true,
     translations: {
       el: { name: "Κορμός", description: "Μπισκότα με σοκολάτα, σε σχήμα μικρού κορμού" },
       en: { name: "Chocolate Log/Mosaic", description: "Biscuits blended with chocolate, freezed in a log-like form" },
@@ -360,6 +409,8 @@ export const pastakia: MenuItem[] = [
     price: 1.30,
     isSoldOut: false,
     hasNuts: true,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Μπαμπαδάκι", description: "Ατομικό γλυκό μπριός με σιρόπι, σαντιγύ και αμύγδαλο" },
       en: { name: "Mini Rum Baba", description: "Small syrup-soaked brioche topped with whipped cream" },
@@ -377,6 +428,9 @@ export const pastakia: MenuItem[] = [
     price: 1.30,
     isSoldOut: false,
     hasNuts: true,
+    hasDairy: true,
+    hasEgg: true,
+    hasSoy: true,
     translations: {
       el: { name: "Cake Pop", description: "Μικρό στρογγυλό κέικ σε ξυλάκι, βουτηγμένο σε χρωματιστή σοκολάτα και τρούφα" },
       en: { name: "Cake Pop", description: "Round bite-sized cake on a stick, dipped in chocolate and colorful truffle" },
@@ -393,6 +447,9 @@ export const pastakia: MenuItem[] = [
     categoryId: "pastakia",
     price: 1.30,
     hasNuts: true,
+    hasDairy: true,
+    hasEgg: true,
+    hasSoy: true,
     translations: {
       el: { name: "Ταρτάκι Σοκολάτας", description: "Τραγανή βάση τάρτας με πλούσια γέμιση σοκολάτας" },
       en: { name: "Mini Chocolate Tart", description: "Crispy tart shell with rich chocolate filling" },
@@ -408,6 +465,8 @@ export const pastakia: MenuItem[] = [
     id: "pastaki_lemon_pie",
     categoryId: "pastakia",
     price: 1.30,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Παστάκι Lemon Pie", description: "Δροσιστική κρέμα λεμονιού με αφράτη μαρέγκα" },
       en: { name: "Mini Lemon Pie", description: "Refreshing lemon cream with fluffy meringue" },
@@ -423,6 +482,8 @@ export const pastakia: MenuItem[] = [
     id: "pastaki_biscuit",
     categoryId: "pastakia",
     price: 1.30,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Παστάκι Μπισκότο", description: "Απολαυστικό παστάκι με γεύση μπισκότο και απαλή κρέμα" },
       en: { name: "Mini Cookie Pastry", description: "Delicious mini pastry with cookies and cream flavor" },
@@ -439,6 +500,9 @@ export const pastakia: MenuItem[] = [
     categoryId: "pastakia",
     price: 1.30,
     hasNuts: true,
+    hasDairy: true,
+    hasEgg: true,
+    hasSoy: true,
     translations: {
       el: { name: "Παστάκι Ferrero", description: "Πλούσιο παστάκι με γεύση σοκολάτας και φουντουκιού" },
       en: { name: "Mini Ferrero Pastry", description: "Rich mini pastry with chocolate and hazelnut flavor" },

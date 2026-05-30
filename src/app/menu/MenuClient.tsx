@@ -380,8 +380,11 @@ export default function MenuClient({
                       itemsInSection.push(arr[i]);
                     }
 
+                    // ΕΔΩ ΕΙΝΑΙ Η ΝΕΑ ΕΞΑΙΡΕΣΗ!
                     const hasInfoOrExtra = itemsInSection.some(
-                      (x) => x.hidePrice === true,
+                      (x) =>
+                        x.hidePrice === true ||
+                        x.id === "siropiasta_extra_ice_cream",
                     );
 
                     if (!hasInfoOrExtra && itemsInSection.length <= 1) {

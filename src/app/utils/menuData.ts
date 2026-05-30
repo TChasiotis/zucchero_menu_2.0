@@ -55,7 +55,7 @@ export const categories: Category[] = [
     id: "siropiasta", translations: { el: "Σιροπιαστά", en: "Syrup Sweets", de: "Sirup-Süßigkeiten", fr: "Desserts au Sirop", es: "Dulces en Almíbar", sr: "Zaliveni kolači", bg: "Сиропирани сладкиши", ro: "Dulciuri cu Sirop" } 
   },
   { 
-    id: "ice_cream", isNotAvailable: false, translations: { el: "Παγωτό", en: "Ice Cream", de: "Eiscreme", fr: "Glace", es: "Helado", sr: "Sladoled", bg: "Сладолед", ro: "Înghețată" } 
+    id: "ice_cream",  translations: { el: "Παγωτό", en: "Ice Cream", de: "Eiscreme", fr: "Glace", es: "Helado", sr: "Sladoled", bg: "Сладолед", ro: "Înghețată" } 
   },
   { 
     id: "pastakia", translations: { el: "Παστάκια", en: "Mini Pastries", de: "Mini-Gebäck", fr: "Mini-Pâtisseries", es: "Mini Pasteles", sr: "Mini Kolači", bg: "Мини Пасти", ro: "Mini Prăjituri" } 

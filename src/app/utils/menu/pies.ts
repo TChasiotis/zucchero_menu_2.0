@@ -31,6 +31,8 @@ export const pies: MenuItem[] = [
     categoryId: "pies",
     price: 0.70,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Τυρόπιτα", description: "Παραδοσιακή χωριάτικη τυρόπιτα με τραγανό φύλλο και γέμιση φέτας" },
       en: { name: "Cheese Pie", description: "Traditional rustic cheese pie with crispy phyllo and feta cheese filling" },
@@ -47,6 +49,8 @@ export const pies: MenuItem[] = [
     categoryId: "pies",
     price: 0.70,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Σπανακοτυρόπιτα", description: "Χωριάτικη σπανακοτυρόπιτα με φρέσκο σπανάκι, φέτα και μυρωδικά" },
       en: { name: "Spinach & Cheese Pie", description: "Rustic pie with fresh spinach, feta cheese, and herbs" },
@@ -63,6 +67,8 @@ export const pies: MenuItem[] = [
     categoryId: "pies",
     price: 0.70,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Πρασοτυρόπιτα", description: "Χωριάτικη πρασοτυρόπιτα με γλυκά πράσα και φέτα" },
       en: { name: "Leek & Cheese Pie", description: "Rustic pie with sweet leeks and feta cheese" },
@@ -79,6 +85,8 @@ export const pies: MenuItem[] = [
     categoryId: "pies",
     price: 0.70,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Πίτα Ζαμπόν & Κασέρι", description: "Χωριάτικη πίτα με λαχταριστό ζαμπόν και λιωμένο κασέρι" },
       en: { name: "Ham & Cheese Pie", description: "Rustic pie with delicious ham and melted yellow cheese" },
@@ -95,6 +103,7 @@ export const pies: MenuItem[] = [
     categoryId: "pies",
     price: 0.70,
     isSoldOut: false,
+    hasEgg: true,
     translations: {
       el: { name: "Κιμαδόπιτα", description: "Χωριάτικη κιμαδόπιτα με πλούσια γέμιση μοσχαρίσιου κιμά" },
       en: { name: "Minced Meat Pie", description: "Rustic pie with a rich minced beef filling" },
@@ -111,6 +120,7 @@ export const pies: MenuItem[] = [
     categoryId: "pies",
     price: 0.70,
     isSoldOut: false,
+    hasEgg: true,
     translations: {
       el: { name: "Κοτόπιτα", description: "Χωριάτικη κοτόπιτα με ζουμερό κοτόπουλο και κόκκινες πιπεριές" },
       en: { name: "Chicken Pie", description: "Rustic pie with juicy chicken and red peppers filling" },
@@ -127,6 +137,8 @@ export const pies: MenuItem[] = [
     categoryId: "pies",
     price: 0.70,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Χωριάτικη Μπουγάτσα με Κρέμα", description: "Χωριάτικη μπουγάτσα με τραγανό παραδοσιακό φύλλο και γλυκιά κρέμα σιμιγδαλιού" },
       en: { name: "Rustic Cream Bougatsa", description: "Rustic bougatsa with crispy traditional phyllo and sweet semolina cream" },
@@ -144,6 +156,8 @@ export const pies: MenuItem[] = [
     price: 2.50,
     unit: "portion",
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Μπουγάτσα με Κρέμα", description: "Παραδοσιακή μπουγάτσα με γλυκιά κρέμα σιμιγδαλιού, πασπαλισμένη με άχνη ζάχαρη και κανέλα" },
       en: { name: "Bougatsa with Cream", description: "Traditional bougatsa with sweet semolina cream, dusted with powdered sugar and cinnamon" },

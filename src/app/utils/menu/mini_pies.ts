@@ -32,6 +32,8 @@ export const miniPies: MenuItem[] = [
     categoryId: "mini_pies",
     price: 0.70,
     isSoldOut: false,
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Κουρού με Τυρί", description: "Παραδοσιακό πιτάκι κουρού με πλούσια γέμιση φέτας" },
       en: { name: "Kourou Cheese Pie", description: "Traditional mini kourou pastry with a rich feta cheese filling" },
@@ -48,15 +50,16 @@ export const miniPies: MenuItem[] = [
     categoryId: "mini_pies",
     price: 0.70,
     isSoldOut: false,
+    hasDairy: true,
     translations: {
       el: { name: "Σφολιάτα με Ανθότυρο και Σουσάμι", description: "Τραγανή σφολιάτα με ελαφρύ ανθότυρο και καβουρδισμένο σουσάμι" },
-      en: { name: "Anthotyros & Sesame Puff Pastry", description: "Crispy puff pastry filled with light anthotyros cheese and topped with toasted sesame seeds" },
-      de: { name: "Anthotyros & Sesame Puff Pastry", description: "Anthotyros-Sesam-Blätterteig: Knuspriger Blätterteig mit leichtem Anthotyros-Käse und Sesam" },
-      fr: { name: "Anthotyros & Sesame Puff Pastry", description: "Feuilleté Anthotyros & Sésame: Feuilleté croustillant au fromage anthotyros léger και sésame torréfié" },
-      es: { name: "Anthotyros & Sesame Puff Pastry", description: "Hojaldre de Anthotyros y Sésamo: Hojaldre crujiente relleno de queso tierno anthotyros y sésamo tostado" },
-      sr: { name: "Anthotyros & Sesame Puff Pastry", description: "Lisnato sa Antotiro Sirom i Susamom: Hrskavo lisnato testo sa laganim antotiro sirom i susamom" },
-      bg: { name: "Anthotyros & Sesame Puff Pastry", description: "Бутерка με Извара и Сусам: Хрупкава бутерка с леко сирене анcheckboxро и печен сусам" },
-      ro: { name: "Anthotyros & Sesame Puff Pastry", description: "Foietaj cu Anthotyros și Susan: Foietaj crocant cu brânză ușoară anthotyros și susan prăjit" }
+      en: { name: "Anthotyro & Sesame Puff Pastry", description: "Crispy puff pastry filled with light anthotyros cheese and topped with toasted sesame seeds" },
+      de: { name: "Anthotyro & Sesame Puff Pastry", description: "Anthotyros-Sesam-Blätterteig: Knuspriger Blätterteig mit leichtem Anthotyros-Käse und Sesam" },
+      fr: { name: "Anthotyro & Sesame Puff Pastry", description: "Feuilleté Anthotyros & Sésame: Feuilleté croustillant au fromage anthotyros léger και sésame torréfié" },
+      es: { name: "Anthotyro & Sesame Puff Pastry", description: "Hojaldre de Anthotyros y Sésamo: Hojaldre crujiente relleno de queso tierno anthotyros y sésamo tostado" },
+      sr: { name: "Anthotyro & Sesame Puff Pastry", description: "Lisnato sa Antotiro Sirom i Susamom: Hrskavo lisnato testo sa laganim antotiro sirom i susamom" },
+      bg: { name: "Anthotyro & Sesame Puff Pastry", description: "Бутерка με Извара и Сусам: Хрупкава бутерка с леко сирене анcheckboxро и печен сусам" },
+      ro: { name: "Anthotyro & Sesame Puff Pastry", description: "Foietaj cu Anthotyros și Susan: Foietaj crocant cu brânză ușoară anthotyros și susan prăjit" }
     }
   },
   {
@@ -64,6 +67,7 @@ export const miniPies: MenuItem[] = [
     categoryId: "mini_pies",
     price: 0.70,
     isSoldOut: false,
+    hasDairy: true,
     translations: {
       el: { name: "Σφολιάτα με Ζαμπόν και Κασέρι", description: "Κλασικός συνδυασμός από εκλεκτό ζαμπόν και λιωμένο κασέρι σε αφράτη σφολιάτα" },
       en: { name: "Ham & Yellow Cheese Puff Pastry", description: "Classic combination of premium ham and melted yellow cheese in a fluffy puff pastry" },
@@ -96,6 +100,7 @@ export const miniPies: MenuItem[] = [
     categoryId: "mini_pies",
     price: 0.70,
     isSoldOut: false,
+    hasDairy: true,
     translations: {
       el: { name: "Μίνι Μπουγατσάκια με Κρέμα", description: "Ατομικά μπουγατσάκια με παραδοσιακή γλυκιά κρέμα" },
       en: { name: "Mini Cream Bougatsa", description: "Individual bite-sized bougatsa pastries filled with traditional sweet cream" },

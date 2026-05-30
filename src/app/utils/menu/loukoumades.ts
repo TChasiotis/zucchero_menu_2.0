@@ -24,6 +24,9 @@ export const loukoumades: MenuItem[] = [
     price: 4.50,
     unit: "portion",
     isSoldOut: false,
+    hasDairy: true,
+    hasSoy: true,
+    hasNuts: true,
     translations: {
       el: { name: "Λουκουμάδες με Σοκολάτα", description: "Αφράτοι παραδοσιακοί λουκουμάδες, τηγανισμένοι τη στιγμή της παραγγελίας, με πλούσια σοκολάτα" },
       en: { name: "Loukoumades with Chocolate", description: "Fluffy traditional Greek doughnuts, freshly deep-fried to order, with rich chocolate" },
@@ -41,6 +44,7 @@ export const loukoumades: MenuItem[] = [
     categoryId: "loukoumades",
     price: 0,
     hidePrice: true,
+    hasNuts: true,
     translations: {
       el: { 
         name: "Extras: Καρύδι, Κανέλα", 

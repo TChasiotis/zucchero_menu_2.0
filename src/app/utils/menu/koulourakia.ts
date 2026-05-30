@@ -33,6 +33,8 @@ export const cookies: MenuItem[] = [
     price: 10.00,
     isSoldOut: false,
     unit: "kg",
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Κλασσικά Κουλουράκια", description: "Παραδοσιακά σπιτικά κουλουράκια, ιδανικά για να συνοδεύσουν τον καφέ ή το τσάι σας" },
       en: { name: "Classic Cookies", description: "Traditional homemade cookies, perfect for pairing with coffee or tea" },
@@ -40,7 +42,7 @@ export const cookies: MenuItem[] = [
       fr: { name: "Classic Cookies", description: "Biscuits Classiques: Biscuits traditionnels faits maison, parfaits pour accompagner le café ou le thé" },
       es: { name: "Classic Cookies", description: "Galletas Clásicas: Galletas tradicionales caseras, perfectas para acompañar el café o el té" },
       sr: { name: "Classic Cookies", description: "Klasični Keksići: Tradicionalni domaći keksići, savršeni uz kafu ili čaj" },
-      bg: { name: "Classic Cookies", description: "Класически Курабийки: Традиционни домашни курабийки, ιδανικά για καφέ ή τσάι" },
+      bg: { name: "Classic Cookies", description: "Класически Курабийки: Традиционни домашни курабийки, ιδανικά για καφέ или чай" },
       ro: { name: "Classic Cookies", description: "Biscuiți Clasici: Biscuiți tradiționali de casă, perfecți pentru a fi savurați alături de cafea sau ceai" }
     }
   },
@@ -50,6 +52,8 @@ export const cookies: MenuItem[] = [
     price: 12.00,
     isSoldOut: false,
     unit: "kg",
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Πτι-Φουρ με Μαρμελάδα", description: "Αφράτα μπισκοτάκια πτι-φουρ γεμισμένα με εκλεκτή μαρμελάδα φρούτων" },
       en: { name: "Petit-Four with Jam", description: "Soft petit-four cookies filled with fine fruit jam" },
@@ -67,6 +71,10 @@ export const cookies: MenuItem[] = [
     price: 12.00,
     isSoldOut: false,
     unit: "kg",
+    hasDairy: true,
+    hasEgg: true,
+    hasSoy: true,
+    hasNuts: true,
     translations: {
       el: { name: "Πτι-Φουρ με Σοκολάτα", description: "Αφράτα μπισκοτάκια πτι-φουρ με πλούσια γέμιση και μερική επικάλυψη τρούφας σοκολάτας" },
       en: { name: "Petit-Four with Chocolate", description: "Soft petit-four cookies with rich chocolate filling and partial chocolate sprinkle coating" },
@@ -82,7 +90,9 @@ export const cookies: MenuItem[] = [
     id: "cookie_yogurt",
     categoryId: "cookies",
     price: 10.00,
-    unit: "kg", // Δηλώνει ότι η τιμή πάει με το κιλό
+    unit: "kg",
+    hasDairy: true,
+    hasEgg: true,
     translations: {
       el: { name: "Κουλουράκια Γιαουρτιού", description: "Μεγάλα, μαλακά και αφράτα παραδοσιακά κουλουράκια, ιδανικά για τον καφέ σας" },
       en: { name: "Yogurt Cookies", description: "Large, soft and fluffy traditional cookies, perfect with your coffee" },

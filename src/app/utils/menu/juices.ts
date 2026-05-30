@@ -7,6 +7,8 @@ export const juices: MenuItem[] = [
     categoryId: "juices",
     price: 2.30,
     isSoldOut: false,
+    isVegan: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Φρέσκος Χυμός Πορτοκάλι 250ml", description: "100% φυσικός χυμός από διαλεχτά ελληνικά πορτοκάλια, γεμάτος βιταμίνη C" },
       en: { name: "Fresh Orange Juice 250ml", description: "100% natural juice from selected Greek oranges, packed with vitamin C" },
@@ -23,6 +25,8 @@ export const juices: MenuItem[] = [
     categoryId: "juices",
     price: 3.30,
     isSoldOut: false,
+    isVegan: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Φρέσκος Χυμός Πορτοκάλι 500ml", description: "100% φυσικός χυμός από διαλεχτά ελληνικά πορτοκάλια, γεμάτος βιταμίνη C" },
       en: { name: "Fresh Orange Juice 500ml", description: "100% natural juice from selected Greek oranges, packed with vitamin C" },
@@ -39,6 +43,8 @@ export const juices: MenuItem[] = [
     categoryId: "juices",
     price: 2.30,
     isSoldOut: false,
+    isVegan: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Φρέσκος Χυμός Μήλο, Πορτοκάλι & Καρότο 250ml", description: "Αναζωογονητικός φυσικός χυμός. Ενέργεια και ευεξία σε κάθε γουλιά" },
       en: { name: "Fresh Apple, Orange & Carrot Juice 250ml", description: "Refreshing natural juice. Energy and wellness in every sip" },
@@ -55,6 +61,8 @@ export const juices: MenuItem[] = [
     categoryId: "juices",
     price: 3.30,
     isSoldOut: false,
+    isVegan: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Φρέσκος Χυμός Μήλο, Πορτοκάλι & Καρότο 500ml", description: "Αναζωογονητικός φυσικός χυμός. Ενέργεια και ευεξία σε κάθε γουλιά" },
       en: { name: "Fresh Apple, Orange & Carrot Juice 500ml", description: "Refreshing natural juice. Energy and wellness in every sip" },
@@ -71,6 +79,8 @@ export const juices: MenuItem[] = [
     categoryId: "juices",
     price: 2.30,
     isSoldOut: false,
+    isVegan: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Φρέσκος Χυμός Ρόδι, Σταφύλι, Μήλο & Καρότο 250ml", description: "Πολυβιταμινούχος φυσικός χυμός, η απόλυτη αντιοξειδωτική ασπίδα" },
       en: { name: "Fresh Pomegranate, Grape, Apple & Carrot Juice 250ml", description: "Multivitamin natural juice, the ultimate antioxidant shield" },
@@ -87,6 +97,8 @@ export const juices: MenuItem[] = [
     categoryId: "juices",
     price: 3.30,
     isSoldOut: false,
+    isVegan: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Φρέσκος Χυμός Ρόδι, Σταφύλι, Μήλο & Καρότο 500ml", description: "Πολυβιταμινούχος φυσικός χυμός, η απόλυτη αντιοξειδωτική ασπίδα" },
       en: { name: "Fresh Pomegranate, Grape, Apple & Carrot Juice 500ml", description: "Multivitamin natural juice, the ultimate antioxidant shield" },
@@ -113,6 +125,8 @@ export const juices: MenuItem[] = [
     categoryId: "juices",
     price: 2.50,
     isSoldOut: false,
+    isVegan: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Χυμός Φράουλα & Μπανάνα ", description: "Απολαυστικός χυμός με την τέλεια ισορροπία γλυκιάς φράουλας και απαλής μπανάνας" },
       en: { name: "Strawberry & Banana Juice ", description: "Delightful juice with a perfect balance of sweet strawberry and smooth banana" },
@@ -129,6 +143,8 @@ export const juices: MenuItem[] = [
     categoryId: "juices",
     price: 2.50,
     isSoldOut: false,
+    isVegan: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Χυμός Ρόδι ", description: "Πλούσιος χυμός ροδιού με ελαφρώς γλυκόξινη γεύση και αντιοξειδωτική δράση" },
       en: { name: "Pomegranate Juice ", description: "Rich pomegranate juice with a slightly sweet and sour taste and antioxidant properties" },
@@ -145,6 +161,8 @@ export const juices: MenuItem[] = [
     categoryId: "juices",
     price: 2.50,
     isSoldOut: false,
+    isVegan: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Χυμός Μύρτιλο ", description: "Εκλεκτός χυμός μύρτιλου, γεμάτος γεύση και ευεργετικές ιδιότητες" },
       en: { name: "Blueberry Juice ", description: "Premium blueberry juice, full of flavor and beneficial properties" },
@@ -161,6 +179,8 @@ export const juices: MenuItem[] = [
     categoryId: "juices",
     price: 2.50,
     isSoldOut: false,
+    isVegan: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Χυμός Πορτοκάλι, Λεμόνι & Καρότο ", description: "Κλασικός ιταλικός συνδυασμός (ACE) για έξτρα ενέργεια και βιταμίνες" },
       en: { name: "Orange, Lemon & Carrot Juice ", description: "Classic Italian combination (ACE) for extra energy and vitamins" },
@@ -177,6 +197,8 @@ export const juices: MenuItem[] = [
     categoryId: "juices",
     price: 2.50,
     isSoldOut: false,
+    isVegan: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Χυμός Αχλάδι ", description: "Βελούδινος χυμός από ζουμερά αχλάδια με πλούσια υφή και γλύκα" },
       en: { name: "Pear Juice ", description: "Velvety juice from juicy pears with a rich texture and sweetness" },
@@ -193,6 +215,8 @@ export const juices: MenuItem[] = [
     categoryId: "juices",
     price: 2.50,
     isSoldOut: false,
+    isVegan: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Χυμός Ανανάς ", description: "Τροπική απόλαυση με δροσιστικό χυμό ανανά, ιδανικός για κάθε στιγμή" },
       en: { name: "Pineapple Juice ", description: "Tropical delight with refreshing pineapple juice, perfect for any moment" },
@@ -209,6 +233,8 @@ export const juices: MenuItem[] = [
     categoryId: "juices",
     price: 2.50,
     isSoldOut: false,
+    isVegan: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Χυμός Πράσινο Μήλο ", description: "Δροσιστικός χυμός πράσινου μήλου με μια ευχάριστη, τραγανή οξύτητα" },
       en: { name: "Green Apple Juice ", description: "Refreshing green apple juice with a pleasant, crisp acidity" },
@@ -225,6 +251,8 @@ export const juices: MenuItem[] = [
     categoryId: "juices",
     price: 2.50,
     isSoldOut: false,
+    isVegan: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Χυμός Ροδάκινο ", description: "Πλούσιος, νεκταρένιος χυμός ροδάκινου με γεμάτη και γλυκιά γεύση" },
       en: { name: "Peach Juice ", description: "Rich, nectarous peach juice with a full and sweet flavor" },
@@ -241,6 +269,8 @@ export const juices: MenuItem[] = [
     categoryId: "juices",
     price: 2.50,
     isSoldOut: false,
+    isVegan: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Χυμός Βερίκοκο ", description: "Απαλός, βελούδινος χυμός βερίκοκου με την αυθεντική γλύκα του φρούτου" },
       en: { name: "Apricot Juice ", description: "Smooth, velvety apricot juice with the authentic sweetness of the fruit" },

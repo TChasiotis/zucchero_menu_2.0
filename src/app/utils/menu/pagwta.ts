@@ -87,6 +87,8 @@ export const iceCream: MenuItem[] = [
     id: "ice_cream_stick_cocoa",
     categoryId: "ice_cream",
     price: 1.50,
+    hasDairy: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Παγωτίνι Ξυλάκι Κακάο", description: "Δροσερό μίνι παγωτό κακάο σε ξυλάκι" },
       en: { name: "Mini Cocoa Ice Cream Stick", description: "Refreshing mini cocoa ice cream on a stick" },
@@ -102,6 +104,8 @@ export const iceCream: MenuItem[] = [
     id: "ice_cream_stick_vanilla",
     categoryId: "ice_cream",
     price: 1.50,
+    hasDairy: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Παγωτίνι Ξυλάκι Βανίλια", description: "Κλασικό μίνι παγωτό βανίλια σε ξυλάκι" },
       en: { name: "Mini Vanilla Ice Cream Stick", description: "Classic mini vanilla ice cream on a stick" },
@@ -117,6 +121,7 @@ export const iceCream: MenuItem[] = [
     id: "ice_cream_cone_cocoa",
     categoryId: "ice_cream",
     price: 1.50,
+    hasDairy: true,
     translations: {
       el: { name: "Παγωτίνι Χωνάκι Κακάο", description: "Τραγανό μίνι χωνάκι με παγωτό κακάο" },
       en: { name: "Mini Cocoa Ice Cream Cone", description: "Crunchy mini cone with cocoa ice cream" },
@@ -132,6 +137,7 @@ export const iceCream: MenuItem[] = [
     id: "ice_cream_cone_vanilla",
     categoryId: "ice_cream",
     price: 1.50,
+    hasDairy: true,
     translations: {
       el: { name: "Παγωτίνι Χωνάκι Βανίλια", description: "Τραγανό μίνι χωνάκι με παγωτό βανίλια" },
       en: { name: "Mini Vanilla Ice Cream Cone", description: "Crunchy mini cone with vanilla ice cream" },
@@ -147,6 +153,7 @@ export const iceCream: MenuItem[] = [
     id: "ice_cream_cone_lotus",
     categoryId: "ice_cream",
     price: 1.50,
+    hasDairy: true,
     translations: {
       el: { name: "Παγωτίνι Χωνάκι Lotus", description: "Τραγανό μίνι χωνάκι με παγωτό γεύσης Lotus Biscoff" },
       en: { name: "Mini Lotus Ice Cream Cone", description: "Crunchy mini cone with Lotus Biscoff flavored ice cream" },
@@ -162,6 +169,8 @@ export const iceCream: MenuItem[] = [
     id: "ice_cream_stick_strawberry",
     categoryId: "ice_cream",
     price: 1.50,
+    hasDairy: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Παγωτίνι Ξυλάκι Φράουλα", description: "Δροσερό μίνι παγωτό φράουλα σε ξυλάκι" },
       en: { name: "Mini Strawberry Ice Cream Stick", description: "Refreshing mini strawberry ice cream on a stick" },
@@ -177,6 +186,7 @@ export const iceCream: MenuItem[] = [
     id: "ice_cream_cone_strawberry",
     categoryId: "ice_cream",
     price: 1.50,
+    hasDairy: true,
     translations: {
       el: { name: "Παγωτίνι Χωνάκι Φράουλα", description: "Τραγανό μίνι χωνάκι με παγωτό φράουλα" },
       en: { name: "Mini Strawberry Ice Cream Cone", description: "Crunchy mini cone with strawberry ice cream" },
@@ -192,6 +202,8 @@ export const iceCream: MenuItem[] = [
     id: "ice_cream_stick_banana",
     categoryId: "ice_cream",
     price: 1.50,
+    hasDairy: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Παγωτίνι Ξυλάκι Μπανάνα", description: "Γλυκό μίνι παγωτό μπανάνα σε ξυλάκι" },
       en: { name: "Mini Banana Ice Cream Stick", description: "Sweet mini banana ice cream on a stick" },
@@ -207,7 +219,9 @@ export const iceCream: MenuItem[] = [
     id: "ice_cream_stick_snickers",
     categoryId: "ice_cream",
     price: 1.50,
+    hasDairy: true,
     hasNuts: true,
+    isGlutenFree: true,
     translations: {
       el: { name: "Παγωτίνι Ξυλάκι Snickers", description: "Μίνι παγωτό με καραμέλα, φιστίκια και επικάλυψη σοκολάτας" },
       en: { name: "Mini Snickers Ice Cream Stick", description: "Mini ice cream with caramel, peanuts, and chocolate coating" },
@@ -223,6 +237,7 @@ export const iceCream: MenuItem[] = [
     id: "ice_cream_sandwich_cream",
     categoryId: "ice_cream",
     price: 1.50,
+    hasDairy: true,
     translations: {
       el: { name: "Παγωτίνι Σάντουιτς Κρέμα", description: "Μίνι παγωτό κρέμα βανίλια ανάμεσα σε δύο μαλακά μπισκότα" },
       en: { name: "Mini Cream Ice Cream Sandwich", description: "Mini vanilla cream ice cream between two soft biscuits" },
@@ -238,6 +253,7 @@ export const iceCream: MenuItem[] = [
     id: "ice_cream_sandwich_choco",
     categoryId: "ice_cream",
     price: 1.50,
+    hasDairy: true,
     translations: {
       el: { name: "Παγωτίνι Σάντουιτς Κρέμα Σοκολάτα", description: "Μίνι παγωτό κρέμα και σοκολάτα ανάμεσα σε δύο μαλακά μπισκότα" },
       en: { name: "Mini Cream & Chocolate Ice Cream Sandwich", description: "Mini cream and chocolate ice cream between two soft biscuits" },
@@ -245,7 +261,7 @@ export const iceCream: MenuItem[] = [
       fr: { name: "Mini Cream & Chocolate Ice Cream Sandwich", description: "Mini Sandwich Glacé Crème et Chocolat. Mini glace crème et chocolat entre deux biscuits moelleux" },
       es: { name: "Mini Cream & Chocolate Ice Cream Sandwich", description: "Mini Sándwich de Helado de Crema y Chocolate. Mini helado de crema y chocolate entre dos galletas suaves" },
       sr: { name: "Mini Cream & Chocolate Ice Cream Sandwich", description: "Mini sladoled sendvič krem i čokolada. Mini sladoled od kreme i čokolade između dva mekana keksa" },
-      bg: { name: "Mini Cream & Chocolate Ice Cream Sandwich", description: "Мини сладоледен сандвич крем и шоколад. Mini сладолед с крем και шоколад μεταξύ две μεки бисквити" },
+      bg: { name: "Mini Cream & Chocolate Ice Cream Sandwich", description: "Мини сладоледен сандвич крем и шоколад. Mini сладолед с крем και шоколад между две μεки бисквити" },
       ro: { name: "Mini Cream & Chocolate Ice Cream Sandwich", description: "Mini Sandwich cu Înghețată Cremă și Ciocolată. Mini înghețată de cremă și ciocolată între doi biscuiți moi" }
     }
   },
@@ -253,6 +269,7 @@ export const iceCream: MenuItem[] = [
     id: "ice_cream_sandwich_lotus",
     categoryId: "ice_cream",
     price: 1.50,
+    hasDairy: true,
     translations: {
       el: { name: "Παγωτίνι Σάντουιτς Lotus", description: "Μίνι παγωτό με γεύση Lotus Biscoff ανάμεσα σε μαλακά μπισκότα" },
       en: { name: "Mini Lotus Ice Cream Sandwich", description: "Mini Lotus Biscoff flavored ice cream between soft biscuits" },
@@ -260,7 +277,7 @@ export const iceCream: MenuItem[] = [
       fr: { name: "Mini Lotus Ice Cream Sandwich", description: "Mini Sandwich Glacé Lotus. Mini glace saveur Lotus Biscoff entre des biscuits moelleux" },
       es: { name: "Mini Lotus Ice Cream Sandwich", description: "Mini Sándwich de Helado Lotus. Mini helado con sabor a Lotus Biscoff entre galletas suaves" },
       sr: { name: "Mini Lotus Ice Cream Sandwich", description: "Mini sladoled sendvič Lotus. Mini sladoled sa ukusom Lotus Biscoff između mekanih keksa" },
-      bg: { name: "Mini Lotus Ice Cream Sandwich", description: "Мини сладоледен сандвич Лотус. Mini сладолед с вкус на Lotus Biscoff μεταξύ μεки бисквити" },
+      bg: { name: "Mini Lotus Ice Cream Sandwich", description: "Мини сладоледен сандвич Лотус. Mini сладолед с вкус на Lotus Biscoff между μεки бисквити" },
       ro: { name: "Mini Lotus Ice Cream Sandwich", description: "Mini Sandwich cu Înghețată Lotus. Mini înghețată cu aromă Lotus Biscoff între biscuiți moi" }
     }
   },
@@ -322,6 +339,8 @@ export const iceCream: MenuItem[] = [
     price: 0,
     hidePrice: true,
     isSoldOut: false,
+    isVegan: true,
+    isGlutenFree: true,
     translations: {
       el: { 
         name: "Extras: Σιρόπι Σοκολάτας, Σιρόπι Καραμέλας, Σιρόπι Φράουλας", 
