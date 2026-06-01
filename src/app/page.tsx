@@ -391,7 +391,6 @@ export default function HomePage() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
-  // DEV FLEX 1: Scroll Progress Bar!
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -405,21 +404,20 @@ export default function HomePage() {
   const currentLangObj =
     availableLanguages.find((l) => l.code === lang) || availableLanguages[0];
 
-  // DEV FLEX 2: Fade In / Fade Out - Μπαίνει και βγαίνει ομαλά
+  // ΤΕΛΕΙΑ ΣΥΜΜΕΤΡΙΑ: Το Fade In & Fade Out είναι ακριβώς ίδια!
   const fadeUpVariant: any = {
     hidden: {
       opacity: 0,
-      y: 50,
-      transition: { duration: 0.4, ease: "easeIn" },
+      y: 60,
+      transition: { duration: 0.5, ease: "easeInOut" },
     },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.7, ease: "easeOut" },
+      transition: { duration: 0.5, ease: "easeInOut" },
     },
   };
 
-  // DEV FLEX 3: Infinite floating animation για τις κάρτες
   const floatVariant: any = {
     animate: {
       y: [0, -10, 0],
@@ -427,20 +425,21 @@ export default function HomePage() {
     },
   };
 
+  // ΑΥΤΟ ΕΙΝΑΙ ΤΟ ΚΟΛΠΟ! Μια αόρατη ζώνη -15% πάνω/κάτω.
+  // Όταν το element ακουμπήσει αυτό το περιθώριο, ενεργοποιεί το hidden (fade out) ΕΝΩ το βλέπεις!
+  const symmetricViewport = { once: false, margin: "-15% 0px -15% 0px" };
+
   if (!mounted) return null;
 
   return (
     <div className="relative min-h-screen bg-slate-900 font-sans selection:bg-[#97dcf5] selection:text-slate-900 overflow-x-hidden scroll-smooth">
-      {/* ProgressBar στο πάνω μέρος της οθόνης */}
       <motion.div
         style={{ scaleX }}
         className="fixed top-0 left-0 right-0 h-1.5 bg-[#97dcf5] origin-left z-[60]"
       />
 
-      {/* --- STICKY HEADER --- */}
       <header className="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/50 shadow-sm transition-all mt-1.5">
         <div className="max-w-6xl mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
-          {/* DRAWER HAMBURGER & LOGO (Left) */}
           <div className="flex items-center">
             <button
               onClick={() => setIsDrawerOpen(true)}
@@ -462,7 +461,6 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* DESKTOP NAV */}
           <nav className="hidden md:flex items-center gap-6">
             <a
               href="#specialties"
@@ -484,9 +482,7 @@ export default function HomePage() {
             </a>
           </nav>
 
-          {/* RIGHT SIDE: MENU BUTTON & LANG DROPDOWN */}
           <div className="flex items-center gap-3 md:gap-4">
-            {/* 1. MENU BUTTON (Left of Lang Dropdown) */}
             <Link
               href={`/menu?lang=${lang}`}
               className="hidden sm:flex group items-center gap-1 bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-full text-sm font-bold shadow-md transition-all"
@@ -498,7 +494,6 @@ export default function HomePage() {
               />
             </Link>
 
-            {/* 2. LANG DROPDOWN (Far Right) */}
             <div className="relative">
               <button
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
@@ -563,7 +558,6 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* --- MOBILE DRAWER --- */}
       <AnimatePresence>
         {isDrawerOpen && (
           <>
@@ -640,7 +634,6 @@ export default function HomePage() {
         )}
       </AnimatePresence>
 
-      {/* --- 1. FIXED PARALLAX HERO SECTION --- */}
       <div className="fixed inset-0 z-0">
         <Image
           src="/images/information/front.jpg"
@@ -677,19 +670,17 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* --- SLIDING CONTENT WRAPPER --- */}
       <div className="relative z-20 bg-white rounded-t-[2.5rem] md:rounded-t-[4rem] shadow-[0_-20px_50px_rgba(0,0,0,0.4)] overflow-hidden">
-        {/* --- 2. SPECIALTIES SECTION (WITH INFINITE FLOAT & FADE IN/OUT) --- */}
+        {/* --- 2. SPECIALTIES SECTION --- */}
         <section
           id="specialties"
           className="py-20 md:py-32 px-4 bg-white scroll-mt-10 overflow-hidden"
         >
           <div className="max-w-6xl mx-auto">
-            {/* once: false -> Επαναλαμβάνεται ΠΑΝΤΑ! */}
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={symmetricViewport}
               variants={fadeUpVariant}
               className="text-center mb-16"
             >
@@ -703,7 +694,7 @@ export default function HomePage() {
               <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={symmetricViewport}
                 variants={fadeUpVariant}
               >
                 <motion.div
@@ -726,7 +717,7 @@ export default function HomePage() {
               <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={symmetricViewport}
                 variants={fadeUpVariant}
               >
                 <motion.div
@@ -750,7 +741,7 @@ export default function HomePage() {
               <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={symmetricViewport}
                 variants={fadeUpVariant}
               >
                 <motion.div
@@ -774,7 +765,7 @@ export default function HomePage() {
               <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={symmetricViewport}
                 variants={fadeUpVariant}
               >
                 <motion.div
@@ -798,7 +789,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* --- 3. THE STICKY SCROLL STORY SECTION --- */}
+        {/* --- 3. STORY SECTION --- */}
         <section
           id="story"
           className="py-20 md:py-32 px-4 max-w-6xl mx-auto border-t border-slate-100 scroll-mt-10 overflow-hidden"
@@ -806,7 +797,7 @@ export default function HomePage() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={symmetricViewport}
             variants={fadeUpVariant}
             className="text-center mb-16 md:mb-24"
           >
@@ -830,7 +821,7 @@ export default function HomePage() {
               <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.5 }}
+                viewport={symmetricViewport}
                 variants={fadeUpVariant}
               >
                 <h3 className="text-2xl font-bold text-slate-800 mb-4">
@@ -853,7 +844,7 @@ export default function HomePage() {
               <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.5 }}
+                viewport={symmetricViewport}
                 variants={fadeUpVariant}
               >
                 <h3 className="text-2xl font-bold text-slate-800 mb-4">
@@ -867,7 +858,7 @@ export default function HomePage() {
               <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.5 }}
+                viewport={symmetricViewport}
                 variants={fadeUpVariant}
               >
                 <h3 className="text-2xl font-bold text-slate-800 mb-4">
@@ -881,7 +872,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* --- 4. ΕΠΙΚΟΙΝΩΝΙΑ & ΤΟΠΟΘΕΣΙΑ --- */}
+        {/* --- 4. CONTACT SECTION --- */}
         <section
           id="contact"
           className="py-20 md:py-24 px-4 bg-slate-50 border-t border-slate-200 scroll-mt-10 overflow-hidden"
@@ -890,7 +881,7 @@ export default function HomePage() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={symmetricViewport}
               variants={fadeUpVariant}
               className="grid grid-cols-1 lg:grid-cols-2 gap-8"
             >
@@ -990,8 +981,9 @@ export default function HomePage() {
 
               <div className="flex flex-col gap-6">
                 <div className="relative w-full h-[300px] md:h-full min-h-[300px] rounded-[2rem] overflow-hidden shadow-sm border border-slate-200 bg-slate-200">
+                  {/* LIVE GOOGLE MAP - ME ΚΟΚΚΙΝΗ ΠΙΝΕΖΑ ΑΚΡΙΒΩΣ ΣΤΟ ΜΑΓΑΖΙ */}
                   <iframe
-                    src="https://maps.google.com/maps?q=Zucchero%20%CE%96%CE%B1%CF%87%CE%B1%CF%81%CE%BF%CF%80%CE%BB%CE%B1%CF%83%CF%84%CE%B5%CE%AF%CE%BF,%20Thessaloniki&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                    src="https://maps.google.com/maps?q=Zucchero%20%CE%96%CE%B1%CF%87%CE%B1%CF%81%CE%BF%CF%80%CE%BB%CE%B1%CF%83%CF%84%CE%B5%CE%AF%CE%BF%20Thessaloniki&t=&z=15&ie=UTF8&iwloc=&output=embed"
                     className="absolute top-0 left-0 w-full h-full border-0"
                     allowFullScreen
                     loading="lazy"
